@@ -14,13 +14,15 @@ def getjson(url, request):
 
 def get_changes_from_gerrit():
     URL = 'https://gerrit.fd.io/r'
-    request = '/changes/?q=project:vpp+status:open+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=SKIP_DIFFSTAT&o=CHECK&o=SUBMITTABLE'
+    request = '/changes/?q=project:vpp+status:open+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE'
     changes = getjson(URL, request)
 
     # We can only fetch 500 entries at the time, limit this to two tries
+    last = changes[-1]
     try:
-        if changes[-1]['_more_changes']:
-            changes += getjson(URL, request+'&S=501')
+        if last['_more_changes'] == True:
+            remaining = getjson(URL, request+'&S=500')
+            changes += remaining
     except:
         pass
     return changes

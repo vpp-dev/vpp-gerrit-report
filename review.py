@@ -15,8 +15,8 @@ import requests
 
 # TODO:
 # 1. Cache CHANGES and MAINTAINERS files
-# 2. Support to add reviewers from MAINTAINERS to gerrit patch
-# 3. Send nag-o-grams to authors?
+# 2. Add reviewers from MAINTAINERS to gerrit patch
+# 3. Send email nag-o-grams to authors?
 # 4. Prettier reports both for maintainers and authors
 # 5. How to deal with unmaintained files and components?
 
@@ -36,7 +36,7 @@ def process_maintainers(text):
     for line in text:
         line = line.rstrip()
         if not line:
-            # Initialize new feature
+            # Save previous feature
             if feature:
                 features[feature['I']] = feature
             feature = {}
@@ -53,13 +53,15 @@ def process_maintainers(text):
             else:
                 feature[tag] = data
         else:
-            pass
-            # print('MISS REGEXP:', line)
+            if feature:
+                feature['description'] = line
+
+    features[feature['I']] = feature
 
     maintainers = {}
     for _, v in features.items():
         if 'M' not in v:
-            print('*** missing maintainer for:', v['I'], file=sys.stderr)
+            print('*** missing maintainer for:', v['I'], v, file=sys.stderr)
             continue
         if isinstance(v['F'], list):
             for fl in v['F']:
@@ -69,7 +71,7 @@ def process_maintainers(text):
     return features, maintainers
 
 
-def get_component_from_filename(maintainers, filename):
+def get_component_from_filename(maintainers, filename, debug=False):
     '''Return the maintainer of a given file'''
     longest_match = 0
     m = None
@@ -79,7 +81,7 @@ def get_component_from_filename(maintainers, filename):
                 if len(k) > longest_match:
                     longest_match = len(k)
                     m = maintainers[k]
-            continue
+                    continue
         if filename.startswith(k):
             if len(k) > longest_match:
                 longest_match = len(k)
@@ -268,10 +270,12 @@ def main():
         rev = next(iter(change['revisions']))
         files = change['revisions'][rev]['files']
         components = {}
+
         for f in files:
             component = get_component_from_filename(maintainers, f)
+            #print('COMPONENT', component, f)
             if not component:
-                print(f'** maintainer not found for: {f}', file=sys.stderr)
+                print(f'*** maintainer not found for: {f}', file=sys.stderr)
             else:
                 if component not in components:
                     components[component] = 1
