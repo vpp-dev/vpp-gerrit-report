@@ -160,6 +160,16 @@ def get_stream(assigneetype, name):
     return st[name], False
 
 
+legend = '''
+Description:
+============
+M - mergable m - merge conflict
+V - verified v - not verified
+E - not expired e - expired
+R - reviewed r - not reviewed
+S - submittable s - not submittable
+'''
+
 def print_report(report):
     '''Sort by author / component or committable'''
     no_authors = 0
@@ -194,6 +204,8 @@ def print_report(report):
         else:
             print('***UNKNOWN ASSIGNEE***', file=sys.stderr)
 
+    print(legend)
+
     print('COMMITTERS:')
     print('===========')
     for _, st in committerstream.items():
@@ -208,14 +220,8 @@ def print_report(report):
         print(f'{st}:')
         print(authorstream[st].getvalue())
 
-    print('Description:')
-    print('============')
-    print('M - mergable m - merge conflict')
-    print('V - verified v - not verified')
-    print('E - not expired e - expired')
-    print('R - reviewed r - not reviewed')
-    print('S - submittable s - not submittable')
-    print()
+    print(legend)
+
     print('Patches assigned:')
     print('     authors:', no_authors)
     print(' maintainers:', no_maintainers)
