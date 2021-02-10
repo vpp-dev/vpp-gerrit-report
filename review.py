@@ -196,17 +196,17 @@ def print_report(report):
 
     print('COMMITTERS:')
     print('===========')
-    for o, st in committerstream.items():
+    for _, st in committerstream.items():
         print(st.getvalue())
     print('MAINTAINERS:')
     print('============')
-    for o, st in maintainerstream.items():
-        print(st.getvalue())
+    for st in sorted(maintainerstream):
+        print(maintainerstream[st].getvalue())
     print('AUTHORS:')
     print('========')
-    for o, st in authorstream.items():
-        print(f'{o}:')
-        print(st.getvalue())
+    for st in sorted(authorstream):
+        print(f'{st}:')
+        print(authorstream[st].getvalue())
 
     print('Description:')
     print('============')
