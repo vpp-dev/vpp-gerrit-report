@@ -114,7 +114,10 @@ def is_reviewed(feature, reviews):
     '''Get reviewers'''
     for k, v in reviews.items():
         if isinstance(v, dict):
-            name = v['name']
+            if 'display_name' in v:
+                name = v['display_name']
+            else:
+                name = v['name']
 
             # Is person a reviewer of given feature?
             if match_maintainer(feature['M'], name):
@@ -129,7 +132,7 @@ def process_reviews(features, reviews, components):
     for c in components:
         reviewed, reviewers, result = is_reviewed(features[c], reviews)
         if reviewed:
-            if result in ('approved', 'liked'):
+            if result in ('approved', 'liked', 'recommended'):
                 continue
         r[c] = {'review': result, 'by': reviewers}
     return r
@@ -259,7 +262,10 @@ def main():
         s['subject'] = change['subject']
         s['unresolved_comment_count'] = change['unresolved_comment_count']
         s['has_review_started'] = change['has_review_started']
-        s['owner'] = change['owner']['name']
+        if 'display_name' in change['owner']:
+            s['owner'] = change['owner']['display_name']
+        else:
+            s['owner'] = change['owner']['name']
         s['number'] = change['_number']
 
         reviews = change['labels']['Code-Review']
