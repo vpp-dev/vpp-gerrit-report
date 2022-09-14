@@ -11,6 +11,7 @@ from datetime import datetime
 from io import StringIO
 import dateutil.parser
 import requests
+from pprint import pprint
 
 
 # TODO:
@@ -58,7 +59,6 @@ def process_maintainers(text):
                 feature["description"] = line
 
     features[feature["I"]] = feature
-
     maintainers = {}
     for _, v in features.items():
         if "M" not in v:
@@ -167,14 +167,22 @@ def get_stream(assigneetype, name):
 legend = """
 Legend:
 -------
-===================== ===========================
-Status Complete       Needs To Be Addressed
-===================== ===========================
-V - verified          v - not verified
-E - not expired       e - expired
-C - comments resolved c - comments not resolved
-R - reviewed          r - not reviewed
-===================== ===========================
+========================== ===========================
+Status Complete            Needs To Be Addressed
+========================== ===========================
+V - verified               v - not verified
+E - not expired            e - expired
+C - no unresolved comments c - comments not resolved
+R - reviewed/approved      r - review incomplete
+# - days since update      # - days since update > 30
+========================== ===========================
+
+Example: [VECr 23]
+    - Verified
+    - Not Expired
+    - Comments resolved
+    - Review incomplete (Code-Review < +1)
+    - 23 days since last update
 """
 
 
@@ -187,8 +195,8 @@ def print_report(report):
         if r["assignee"] == "author":
             st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
             st.write(
-                f'\n  `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
-                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}\n'
+                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
             )
             no_authors += 1
         elif r["assignee"] == "maintainer":
@@ -197,37 +205,46 @@ def print_report(report):
                 for c in r["missing_reviews_from"]:
                     st, new = get_stream(r["assignee"], c)
                     if new:
-                        maintainers = r["missing_reviews_from"][c]["by"]
-                        if isinstance(maintainers, list):
-                            maintainers = ", ".join(maintainers)
+                        maintainers = f'**{r["missing_reviews_from"][c]["by"]}'
+                        maintainers = re.sub("[\[\]']+", "", maintainers)
+                        maintainers = re.sub(", ", ", **", maintainers)
+                        maintainers = re.sub(" <", "** <", maintainers)
+                        maintainers = re.sub(
+                            " vpp-dev@lists.fd.io",
+                            "** vpp-dev@lists.fd.io",
+                            maintainers,
+                        )
                         st.write(f"\n{c}: {maintainers}")
                     st.write(
-                        f'\n  `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
-                        f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}\n'
+                        f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                        f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
                     )
             else:
                 st, new = get_stream(r["assignee"], "unknown maintainer")
                 if new:
                     st.write("unknown maintainer:\n")
                 st.write(
-                    f'\n  `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
-                    f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}\n'
+                    f'  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                    f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
                 )
             no_maintainers += 1
         elif r["assignee"] == "committer":
             no_committers += 1
             st, new = get_stream(r["assignee"], "committer")
             st.write(
-                f'\n  `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
-                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}\n\n'
+                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
             )
         else:
             print("***UNKNOWN ASSIGNEE***", file=sys.stderr)
 
     header = f"""
-======================================================================
-FD.io Gerrit Change Report generated on {datetime.now().strftime('%A %Y-%m-%d, %H:%M:%S')}
-======================================================================
+==============================================
+FD.io VPP (master branch) Gerrit Change Report
+==============================================
+--------------------------------------------
+generated on {datetime.now().strftime('%A %Y-%m-%d, %H:%M:%S')}
+--------------------------------------------
 """
     print(header)
     print(legend)
@@ -235,12 +252,21 @@ FD.io Gerrit Change Report generated on {datetime.now().strftime('%A %Y-%m-%d, %
     print(
         "\nCommitters:"
         "\n-----------"
-        "\n**These gerrit changes have been approved by MAINTAINERS."
-        "\nPlease perform a final review & submit.**"
+        "\n| **These gerrit changes have been**\n"
+        "\n    - Verified"
+        "\n    - Not expired"
+        "\n    - Comments resolved"
+        "\n    - Approved by Maintainers"
+        "\n\n| **Please perform a final review & submit.**"
     )
     for _, st in committerstream.items():
         print(st.getvalue())
-    print("\nMaintainers:\n------------\n**Please review these gerrit changes.**")
+    print(
+        "\nMaintainers:\n------------"
+        "\n| **Please review these gerrit changes.**"
+        "\n\n| **NOTE: Gerrit changes may be included under more than one feature based"
+        " on the modified files regardless of the feature list included on the commit headline.**"
+    )
     for st in sorted(maintainerstream):
         print(maintainerstream[st].getvalue())
     print(
