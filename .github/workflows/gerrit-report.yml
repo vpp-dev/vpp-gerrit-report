@@ -1,0 +1,50 @@
+name: Generate VPP Gerrit Change Report
+
+on:
+  schedule:
+  - cron:  '15 1 * * *'
+
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Environment
+      env:
+        SECRET_SSH_KEY: ${{ secrets.VPP_GERRIT_REPORT_PRIVATE_SSH_KEY }}
+      run: |
+        sudo mkdir /run/user/$(id -u) || true
+        sudo chown $(whoami) /run/user/$(id -u)
+        echo "$SECRET_SSH_KEY" >secret_ssh_key
+        chmod 600 secret_ssh_key
+        ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-gerrit-report.git'
+
+    - name: Generate VPP Gerrit Change Report
+      run: |
+        ./vpp-gerrit-report/vpp_gerrit_report.sh
+
+    - name: Push the new report
+      env:
+        SECRET_SSH_KEY: ${{ secrets.VPP_GERRIT_REPORT_PRIVATE_SSH_KEY }}
+      run: |
+        cd vpp-gerrit-report
+        cp $(find . -name *report.rst | tail -1) VPP-GERRIT-REPORT.rst 
+        git config user.email "dwallacelf@gmail.com"
+        git config user.name  "Dave Wallace (ghjobs)"
+        git add VPP-GERRIT-REPORT.rst || true
+        git commit -a -m "Auto-update at $(date)"
+        ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'

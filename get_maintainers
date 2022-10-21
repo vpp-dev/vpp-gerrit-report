@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl -o MAINTAINERS https://git.fd.io/vpp/plain/MAINTAINERS
