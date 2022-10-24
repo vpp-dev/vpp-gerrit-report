@@ -47,4 +47,4 @@ jobs:
         git config user.name  "Dave Wallace (ghjobs)"
         git add VPP-GERRIT-REPORT.rst || true
         git commit -a -m "Auto-update at $(date)"
-        ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
+        ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin main'
