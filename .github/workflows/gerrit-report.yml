@@ -35,7 +35,7 @@ jobs:
 
     - name: Generate VPP Gerrit Change Report
       run: |
-        ./vpp-gerrit-report/vpp_gerrit_report.sh
+        ./vpp-gerrit-report/scripts/vpp_gerrit_report.sh
 
     - name: Push the new report
       env:
