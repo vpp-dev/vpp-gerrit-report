@@ -3,7 +3,7 @@
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Tuesday 2022-10-25, 00:58:07
+generated on Tuesday 2022-10-25, 01:02:54
 --------------------------------------------
 
 
@@ -622,7 +622,7 @@ Authors:
   | `33000 <https:////gerrit.fd.io/r/c/vpp/+/33000>`_ [VeC 479]: tests: alternative log directory for unittest logs
   | `31937 <https:////gerrit.fd.io/r/c/vpp/+/31937>`_ [vec 556]: tests: enable make test to be run inside a VM
   | `29921 <https:////gerrit.fd.io/r/c/vpp/+/29921>`_ [veC 705]: tests: run tests against an existing VPP instance
-  | `18602 <https:////gerrit.fd.io/r/c/vpp/+/18602>`_ [VeC 1102]: tests: fixes test_bier_e2e_64 for python3
+  | `18602 <https:////gerrit.fd.io/r/c/vpp/+/18602>`_ [VeC 1103]: tests: fixes test_bier_e2e_64 for python3
   | `22817 <https:////gerrit.fd.io/r/c/vpp/+/22817>`_ [VeC 1103]: tests: fix scapy error when using python3
   | `18606 <https:////gerrit.fd.io/r/c/vpp/+/18606>`_ [veC 1302]: fixes TypeError raised by the framework when using python3
   | `18128 <https:////gerrit.fd.io/r/c/vpp/+/18128>`_ [VeC 1326]: make-test: apply common PEP8 style conventions
