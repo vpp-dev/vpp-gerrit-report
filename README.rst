@@ -1,6 +1,6 @@
-=================
+#################
 VPP-GERRIT-REPORT
-=================
+#################
 
 VPP Gerrit Report categorizes the state of the gerrit.fd.io review queue.  Each gerrit change is labeled with the following status:
 
@@ -2595,4 +2595,3 @@ authors          534
 maintainers      45
 committers       0
 ================ ===
-
