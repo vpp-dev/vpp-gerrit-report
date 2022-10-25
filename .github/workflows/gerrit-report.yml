@@ -42,7 +42,7 @@ jobs:
         SECRET_SSH_KEY: ${{ secrets.VPP_GERRIT_REPORT_PRIVATE_SSH_KEY }}
       run: |
         cd vpp-gerrit-report
-        sed -i.bak '/^Latest VPP Gerrit Report:$/,$d' README.rst
+        sed -i.bak '/^Here is the latest VPP Gerrit Report:$/,$d' README.rst
         echo -e "Here is the latest VPP Gerrit Report:\n-------------------------------------" >> README.rst
         cp $(find . -name *report.rst | tail -1) VPP-GERRIT-REPORT.rst
         cat VPP-GERRIT-REPORT.rst >> README.rst
