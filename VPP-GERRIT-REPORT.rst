@@ -3,7 +3,7 @@
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Monday 2022-10-24, 21:37:57
+generated on Tuesday 2022-10-25, 00:44:07
 --------------------------------------------
 
 
@@ -198,8 +198,8 @@ Authors:
 
   | `34844 <https:////gerrit.fd.io/r/c/vpp/+/34844>`_ [veC 224]: misc: fix physmem allocation error handling
   | `27474 <https:////gerrit.fd.io/r/c/vpp/+/27474>`_ [veC 867]: ip: expose API to enable IP4 on an interface
-  | `27460 <https:////gerrit.fd.io/r/c/vpp/+/27460>`_ [veC 868]: quic: WIP: improve scheduling
-  | `27127 <https:////gerrit.fd.io/r/c/vpp/+/27127>`_ [veC 881]: ipsec: WIP: IPsec SA pinning experiment
+  | `27460 <https:////gerrit.fd.io/r/c/vpp/+/27460>`_ [veC 869]: quic: WIP: improve scheduling
+  | `27127 <https:////gerrit.fd.io/r/c/vpp/+/27127>`_ [veC 882]: ipsec: WIP: IPsec SA pinning experiment
   | `25996 <https:////gerrit.fd.io/r/c/vpp/+/25996>`_ [veC 949]: tap: improve default rx scheduling
 
 **Anatoly Nikulin** <trotux@gmail.com>:
@@ -224,7 +224,7 @@ Authors:
   | `35638 <https:////gerrit.fd.io/r/c/vpp/+/35638>`_ [vEC 3]: fateshare: a plugin for managing child processes
   | `31368 <https:////gerrit.fd.io/r/c/vpp/+/31368>`_ [Vec 124]: vlib: Sleep less in unix input if there were active signals recently
   | `36377 <https:////gerrit.fd.io/r/c/vpp/+/36377>`_ [VeC 137]: tests: add libmemif tests
-  | `36142 <https:////gerrit.fd.io/r/c/vpp/+/36142>`_ [veC 154]: build: add a check that "Fix" commits also refer to the commit that they are fixing
+  | `36142 <https:////gerrit.fd.io/r/c/vpp/+/36142>`_ [veC 155]: build: add a check that "Fix" commits also refer to the commit that they are fixing
   | `28513 <https:////gerrit.fd.io/r/c/vpp/+/28513>`_ [veC 187]: capo: Calico Policies plugin
   | `35955 <https:////gerrit.fd.io/r/c/vpp/+/35955>`_ [Vec 194]: api: do not attempt to pass the null queue pointer from vl_api_can_send_msg
   | `28083 <https:////gerrit.fd.io/r/c/vpp/+/28083>`_ [VeC 269]: acl: acl-plugin custom policies
@@ -247,7 +247,7 @@ Authors:
 
 **Asumu Takikawa** <asumu@igalia.com>:
 
-  | `16387 <https:////gerrit.fd.io/r/c/vpp/+/16387>`_ [veC 1410]: nat: fix issues in MAP-E port allocation mode
+  | `16387 <https:////gerrit.fd.io/r/c/vpp/+/16387>`_ [veC 1411]: nat: fix issues in MAP-E port allocation mode
   | `16388 <https:////gerrit.fd.io/r/c/vpp/+/16388>`_ [veC 1418]: CSIT-541: add lwB4 functionality for lw4o6
 
 **Atzm Watanabe** <atzmism@gmail.com>:
@@ -279,7 +279,7 @@ Authors:
 
 **Carl Baldwin** <carl@ecbaldwin.net>:
 
-  | `23528 <https:////gerrit.fd.io/r/c/vpp/+/23528>`_ [vec 1070]: docs: Remove redundancy on building VPP page
+  | `23528 <https:////gerrit.fd.io/r/c/vpp/+/23528>`_ [vec 1071]: docs: Remove redundancy on building VPP page
 
 **Carl Smith** <carl.smith@alliedtelesis.co.nz>:
 
@@ -364,7 +364,7 @@ Authors:
 **Florin Coras** <florin.coras@gmail.com>:
 
   | `36252 <https:////gerrit.fd.io/r/c/vpp/+/36252>`_ [VeC 146]: svm: multi chunk allocs if requests larger than max chunk
-  | `23529 <https:////gerrit.fd.io/r/c/vpp/+/23529>`_ [VeC 411]: tcp: fin on data packets
+  | `23529 <https:////gerrit.fd.io/r/c/vpp/+/23529>`_ [VeC 412]: tcp: fin on data packets
 
 **Gabriel Oginski** <gabrielx.oginski@intel.com>:
 
@@ -389,7 +389,7 @@ Authors:
 **Govindarajan Mohandoss** <govindarajan.mohandoss@arm.com>:
 
   | `28164 <https:////gerrit.fd.io/r/c/vpp/+/28164>`_ [veC 804]: acl: ACL Plugin performance improvement for both SF and SL modes
-  | `27167 <https:////gerrit.fd.io/r/c/vpp/+/27167>`_ [veC 879]: acl: ACL Plugin performance improvement for both SF and SL modes
+  | `27167 <https:////gerrit.fd.io/r/c/vpp/+/27167>`_ [veC 880]: acl: ACL Plugin performance improvement for both SF and SL modes
 
 **Hedi Bouattour** <hedibouattour2010@gmail.com>:
 
@@ -422,8 +422,8 @@ Authors:
 **Ivan Shvedunov** <ivan4th@gmail.com>:
 
   | `36592 <https:////gerrit.fd.io/r/c/vpp/+/36592>`_ [VeC 110]: stats: handle interface renames properly
-  | `36590 <https:////gerrit.fd.io/r/c/vpp/+/36590>`_ [VeC 110]: nat: fix handling checksum offload in nat44-ed
-  | `28085 <https:////gerrit.fd.io/r/c/vpp/+/28085>`_ [Vec 817]: hsa: fix proxy crash upon failed connect
+  | `36590 <https:////gerrit.fd.io/r/c/vpp/+/36590>`_ [VeC 111]: nat: fix handling checksum offload in nat44-ed
+  | `28085 <https:////gerrit.fd.io/r/c/vpp/+/28085>`_ [Vec 818]: hsa: fix proxy crash upon failed connect
 
 **Jack Xu** <jack.c.xu@ericsson.com>:
 
@@ -479,7 +479,7 @@ Authors:
 **Jing Peng** <pj.hades@gmail.com>:
 
   | `36186 <https:////gerrit.fd.io/r/c/vpp/+/36186>`_ [VeC 157]: nat: fix nat44 fib reference count bookkeeping
-  | `36062 <https:////gerrit.fd.io/r/c/vpp/+/36062>`_ [VeC 178]: vppinfra: fix duplicate bihash stat update
+  | `36062 <https:////gerrit.fd.io/r/c/vpp/+/36062>`_ [VeC 179]: vppinfra: fix duplicate bihash stat update
   | `36042 <https:////gerrit.fd.io/r/c/vpp/+/36042>`_ [VeC 181]: vppinfra: add bihash update interface
 
 **John Lo** <lojultra2020@outlook.com>:
@@ -529,7 +529,7 @@ Authors:
 
 **Klement Sekera** <klement.sekera@gmail.com>:
 
-  | `35739 <https:////gerrit.fd.io/r/c/vpp/+/35739>`_ [veC 214]: tests: refactor assert*counter_equal APIs
+  | `35739 <https:////gerrit.fd.io/r/c/vpp/+/35739>`_ [veC 215]: tests: refactor assert*counter_equal APIs
   | `35218 <https:////gerrit.fd.io/r/c/vpp/+/35218>`_ [veC 261]: tests: prevent running as root
   | `32435 <https:////gerrit.fd.io/r/c/vpp/+/32435>`_ [veC 266]: nat: enhance test - make sure all workers are hit
   | `33507 <https:////gerrit.fd.io/r/c/vpp/+/33507>`_ [VeC 272]: nat: properly handle truncated packets
@@ -545,7 +545,7 @@ Authors:
 
 **Leung Lai Yung** <benkerbuild@gmail.com>:
 
-  | `36128 <https:////gerrit.fd.io/r/c/vpp/+/36128>`_ [VeC 161]: vppinfra: remove unused line
+  | `36128 <https:////gerrit.fd.io/r/c/vpp/+/36128>`_ [VeC 162]: vppinfra: remove unused line
 
 **Luo Yaozu** <luoyaozu@foxmail.com>:
 
@@ -592,7 +592,7 @@ Authors:
 **Mohsin Kazmi** <sykazmi@cisco.com>:
 
   | `37505 <https:////gerrit.fd.io/r/c/vpp/+/37505>`_ [vEC 3]: gso: add gso documentation
-  | `37497 <https:////gerrit.fd.io/r/c/vpp/+/37497>`_ [vEC 3]: devices: make the gso and qdisc-bypass default
+  | `37497 <https:////gerrit.fd.io/r/c/vpp/+/37497>`_ [vEC 4]: devices: make the gso and qdisc-bypass default
   | `36725 <https:////gerrit.fd.io/r/c/vpp/+/36725>`_ [Vec 89]: virtio: add support for tx-queue-size
   | `36513 <https:////gerrit.fd.io/r/c/vpp/+/36513>`_ [VeC 118]: libmemif: add the binaries in the packaging
   | `36484 <https:////gerrit.fd.io/r/c/vpp/+/36484>`_ [VeC 124]: libmemif: add testing application
@@ -619,7 +619,7 @@ Authors:
 
 **Naveen Joy** <najoy@cisco.com>:
 
-  | `33000 <https:////gerrit.fd.io/r/c/vpp/+/33000>`_ [VeC 478]: tests: alternative log directory for unittest logs
+  | `33000 <https:////gerrit.fd.io/r/c/vpp/+/33000>`_ [VeC 479]: tests: alternative log directory for unittest logs
   | `31937 <https:////gerrit.fd.io/r/c/vpp/+/31937>`_ [vec 556]: tests: enable make test to be run inside a VM
   | `29921 <https:////gerrit.fd.io/r/c/vpp/+/29921>`_ [veC 705]: tests: run tests against an existing VPP instance
   | `18602 <https:////gerrit.fd.io/r/c/vpp/+/18602>`_ [VeC 1102]: tests: fixes test_bier_e2e_64 for python3
@@ -690,7 +690,7 @@ Authors:
 
   | `24082 <https:////gerrit.fd.io/r/c/vpp/+/24082>`_ [veC 515]: vlib: log - fix input handling of 'default' subclass
   | `30545 <https:////gerrit.fd.io/r/c/vpp/+/30545>`_ [veC 517]: tests: refactor gbp tests
-  | `26832 <https:////gerrit.fd.io/r/c/vpp/+/26832>`_ [veC 517]: vxlan-gpe: update api defaults/fix protocol
+  | `26832 <https:////gerrit.fd.io/r/c/vpp/+/26832>`_ [veC 518]: vxlan-gpe: update api defaults/fix protocol
   | `26150 <https:////gerrit.fd.io/r/c/vpp/+/26150>`_ [VeC 523]: build: fix make 'install-deps' on fresh container
   | `31997 <https:////gerrit.fd.io/r/c/vpp/+/31997>`_ [VeC 523]: build: fix missing clang dependency in make install-dep
   | `27349 <https:////gerrit.fd.io/r/c/vpp/+/27349>`_ [VeC 523]: libmemif:  don't redefine _GNU_SOURCE
@@ -708,8 +708,8 @@ Authors:
   | `31295 <https:////gerrit.fd.io/r/c/vpp/+/31295>`_ [VeC 616]: misc: remove indent-on linter
   | `26178 <https:////gerrit.fd.io/r/c/vpp/+/26178>`_ [veC 618]: api: add msg_id to 'client input queue is stuffed...' message
   | `30546 <https:////gerrit.fd.io/r/c/vpp/+/30546>`_ [veC 618]: vxlan-gbp: add interface_name to dump/details to use VppVxlanGbpTunnel
-  | `26873 <https:////gerrit.fd.io/r/c/vpp/+/26873>`_ [veC 618]: misc: vom - fix variable name in dhcp_client_cmds bind_cmd
-  | `24570 <https:////gerrit.fd.io/r/c/vpp/+/24570>`_ [veC 618]: gbp: set VNID_INVALID to last value in range
+  | `26873 <https:////gerrit.fd.io/r/c/vpp/+/26873>`_ [veC 619]: misc: vom - fix variable name in dhcp_client_cmds bind_cmd
+  | `24570 <https:////gerrit.fd.io/r/c/vpp/+/24570>`_ [veC 619]: gbp: set VNID_INVALID to last value in range
   | `23018 <https:////gerrit.fd.io/r/c/vpp/+/23018>`_ [veC 619]: devices: add context around console messages
   | `26871 <https:////gerrit.fd.io/r/c/vpp/+/26871>`_ [veC 619]: misc: vom - cleanup typos for doxygen
   | `26833 <https:////gerrit.fd.io/r/c/vpp/+/26833>`_ [veC 619]: tests: refactor VppInterface
@@ -722,34 +722,34 @@ Authors:
   | `30360 <https:////gerrit.fd.io/r/c/vpp/+/30360>`_ [veC 619]: papi: mark apifiles option of VPPApiClient as non-optional
   | `30220 <https:////gerrit.fd.io/r/c/vpp/+/30220>`_ [veC 619]: vapi: cleanup nits in vapi doc
   | `24131 <https:////gerrit.fd.io/r/c/vpp/+/24131>`_ [VeC 663]: vlib: add LSB standard exit codes if vpp doesn't start properly
-  | `21208 <https:////gerrit.fd.io/r/c/vpp/+/21208>`_ [veC 676]: tests: don't pin python dependencies
+  | `21208 <https:////gerrit.fd.io/r/c/vpp/+/21208>`_ [veC 677]: tests: don't pin python dependencies
   | `30435 <https:////gerrit.fd.io/r/c/vpp/+/30435>`_ [veC 677]: tests: fix node variant tests
   | `30080 <https:////gerrit.fd.io/r/c/vpp/+/30080>`_ [veC 679]: vppapigen:  WIP -- make vppapigen importable as a python module
-  | `30343 <https:////gerrit.fd.io/r/c/vpp/+/30343>`_ [veC 684]: api: remove [backwards_compatable] option and bump semver
+  | `30343 <https:////gerrit.fd.io/r/c/vpp/+/30343>`_ [veC 685]: api: remove [backwards_compatable] option and bump semver
   | `30289 <https:////gerrit.fd.io/r/c/vpp/+/30289>`_ [veC 688]: tests:  split wireguard tests from configuation classes
-  | `26703 <https:////gerrit.fd.io/r/c/vpp/+/26703>`_ [veC 688]: tests: fix memif ping
-  | `29938 <https:////gerrit.fd.io/r/c/vpp/+/29938>`_ [VeC 691]: tests: refactor debug_internal into subclass of VppTestCase
+  | `26703 <https:////gerrit.fd.io/r/c/vpp/+/26703>`_ [veC 689]: tests: fix memif ping
+  | `29938 <https:////gerrit.fd.io/r/c/vpp/+/29938>`_ [VeC 692]: tests: refactor debug_internal into subclass of VppTestCase
   | `18694 <https:////gerrit.fd.io/r/c/vpp/+/18694>`_ [veC 697]: papi: Add an option to build vpp_papi with same version as VPP.
   | `30078 <https:////gerrit.fd.io/r/c/vpp/+/30078>`_ [veC 701]: tests: vpp_papi EXPERIMENT Do not merge!!!
   | `25727 <https:////gerrit.fd.io/r/c/vpp/+/25727>`_ [VeC 891]: papi: build setup under python3
-  | `26886 <https:////gerrit.fd.io/r/c/vpp/+/26886>`_ [veC 901]: vom: update .clang-format
+  | `26886 <https:////gerrit.fd.io/r/c/vpp/+/26886>`_ [veC 902]: vom: update .clang-format
   | `26358 <https:////gerrit.fd.io/r/c/vpp/+/26358>`_ [VeC 920]: tests: SonarCloud refactor cli string literals
   | `26225 <https:////gerrit.fd.io/r/c/vpp/+/26225>`_ [VeC 939]: vppapigen: for vat plugins, use local_logger
   | `24573 <https:////gerrit.fd.io/r/c/vpp/+/24573>`_ [VeC 1000]: ethernet: create unique default loopback mac-addresses
   | `24132 <https:////gerrit.fd.io/r/c/vpp/+/24132>`_ [VeC 1019]: tests:  improve checks for test_tap
   | `23555 <https:////gerrit.fd.io/r/c/vpp/+/23555>`_ [VeC 1020]: tests: ensure host has enough cores for test
-  | `24189 <https:////gerrit.fd.io/r/c/vpp/+/24189>`_ [VeC 1024]: tests: refactor QUICAppWorker
+  | `24189 <https:////gerrit.fd.io/r/c/vpp/+/24189>`_ [VeC 1025]: tests: refactor QUICAppWorker
   | `24107 <https:////gerrit.fd.io/r/c/vpp/+/24107>`_ [veC 1025]: tests: Experiment - log info in case of startUpClass failure
-  | `24159 <https:////gerrit.fd.io/r/c/vpp/+/24159>`_ [veC 1025]: tests: vlib - remove set pmc instructions-per-clock
+  | `24159 <https:////gerrit.fd.io/r/c/vpp/+/24159>`_ [veC 1026]: tests: vlib - remove set pmc instructions-per-clock
   | `23755 <https:////gerrit.fd.io/r/c/vpp/+/23755>`_ [vec 1026]: papi tests: add ability for test to connect via vapi socket
   | `23349 <https:////gerrit.fd.io/r/c/vpp/+/23349>`_ [veC 1032]: build: add python imports to 'make checkstyle'
   | `24114 <https:////gerrit.fd.io/r/c/vpp/+/24114>`_ [veC 1032]: tests:  use flake8 for 'make test-checkstyle'
   | `20228 <https:////gerrit.fd.io/r/c/vpp/+/20228>`_ [veC 1032]: misc: run verify jobs against debug images
   | `24087 <https:////gerrit.fd.io/r/c/vpp/+/24087>`_ [veC 1039]: tests: ip6 add comments in SLAAC test
-  | `23030 <https:////gerrit.fd.io/r/c/vpp/+/23030>`_ [veC 1039]: tests: enable dpdk plugin
+  | `23030 <https:////gerrit.fd.io/r/c/vpp/+/23030>`_ [veC 1040]: tests: enable dpdk plugin
   | `23488 <https:////gerrit.fd.io/r/c/vpp/+/23488>`_ [veC 1047]: tests: don't try to remove vpp_config without conn to api.
-  | `23951 <https:////gerrit.fd.io/r/c/vpp/+/23951>`_ [Vec 1047]: vppapigen: fix for explicit types
-  | `23664 <https:////gerrit.fd.io/r/c/vpp/+/23664>`_ [veC 1056]: tests:  skip test if can't run worker executable
+  | `23951 <https:////gerrit.fd.io/r/c/vpp/+/23951>`_ [Vec 1048]: vppapigen: fix for explicit types
+  | `23664 <https:////gerrit.fd.io/r/c/vpp/+/23664>`_ [veC 1057]: tests:  skip test if can't run worker executable
   | `23491 <https:////gerrit.fd.io/r/c/vpp/+/23491>`_ [veC 1059]: tests: fix run_test exception
   | `23697 <https:////gerrit.fd.io/r/c/vpp/+/23697>`_ [veC 1060]: tests: change vapi_response_timeout in cli test
   | `23490 <https:////gerrit.fd.io/r/c/vpp/+/23490>`_ [VeC 1061]: tests: framework VppDiedError - handle vpp hung
@@ -765,8 +765,8 @@ Authors:
   | `23031 <https:////gerrit.fd.io/r/c/vpp/+/23031>`_ [veC 1090]: tests: remove python2isms from framework.py
   | `20292 <https:////gerrit.fd.io/r/c/vpp/+/20292>`_ [veC 1131]: tests: have test_flowprobe.py use existing api calls
   | `20185 <https:////gerrit.fd.io/r/c/vpp/+/20185>`_ [vec 1169]: papi: make UnexpectedApiReturnValueError friendlier
-  | `20632 <https:////gerrit.fd.io/r/c/vpp/+/20632>`_ [veC 1170]: tests: improve ipsec test performance
-  | `20945 <https:////gerrit.fd.io/r/c/vpp/+/20945>`_ [VeC 1181]: vapi: fix vapi_c_gen.py suport for defaults
+  | `20632 <https:////gerrit.fd.io/r/c/vpp/+/20632>`_ [veC 1171]: tests: improve ipsec test performance
+  | `20945 <https:////gerrit.fd.io/r/c/vpp/+/20945>`_ [VeC 1182]: vapi: fix vapi_c_gen.py suport for defaults
   | `19522 <https:////gerrit.fd.io/r/c/vpp/+/19522>`_ [Vec 1182]: api:  return errorcode cli_inband
   | `20266 <https:////gerrit.fd.io/r/c/vpp/+/20266>`_ [veC 1188]: tests: refactor CliFailedCommandError
   | `20484 <https:////gerrit.fd.io/r/c/vpp/+/20484>`_ [Vec 1188]: misc: add dependency info to commit template
@@ -845,7 +845,7 @@ Authors:
 
 **Rajesh Saluja** <rajsaluj@cisco.com>:
 
-  | `31016 <https:////gerrit.fd.io/r/c/vpp/+/31016>`_ [veC 633]: estimated mtu should be derived from max_fragment_length
+  | `31016 <https:////gerrit.fd.io/r/c/vpp/+/31016>`_ [veC 634]: estimated mtu should be derived from max_fragment_length
   | `20415 <https:////gerrit.fd.io/r/c/vpp/+/20415>`_ [VeC 929]: ip: calculate TCP/UDP checksum before fragmenting the packet if VNET_BUFFER_F_OFFLOAD_xxx_CKSUM flag is set
 
 **Rajith Ramakrishna** <rajith@rtbrick.com>:
@@ -970,9 +970,9 @@ Authors:
 
 **Vladislav Grishenko** <themiron@mail.ru>:
 
-  | `35721 <https:////gerrit.fd.io/r/c/vpp/+/35721>`_ [VeC 31]: vlib: stop worker threads on main loop exit
-  | `35726 <https:////gerrit.fd.io/r/c/vpp/+/35726>`_ [VeC 31]: papi: fix socket api max message id calculation
-  | `35914 <https:////gerrit.fd.io/r/c/vpp/+/35914>`_ [VeC 159]: linux-cp: refactor sw_if_index bool vector to bitmap
+  | `35721 <https:////gerrit.fd.io/r/c/vpp/+/35721>`_ [VeC 32]: vlib: stop worker threads on main loop exit
+  | `35726 <https:////gerrit.fd.io/r/c/vpp/+/35726>`_ [VeC 32]: papi: fix socket api max message id calculation
+  | `35914 <https:////gerrit.fd.io/r/c/vpp/+/35914>`_ [VeC 160]: linux-cp: refactor sw_if_index bool vector to bitmap
   | `35796 <https:////gerrit.fd.io/r/c/vpp/+/35796>`_ [VeC 200]: vlib: avoid non-mp-safe cli process node updates
 
 **Vratko Polak** <vrpolak@cisco.com>:
@@ -993,7 +993,7 @@ Authors:
 **Xiaoming Jiang** <jiangxiaoming@outlook.com>:
 
   | `37427 <https:////gerrit.fd.io/r/c/vpp/+/37427>`_ [vEC 8]: crypto: fix crypto dequeue handlers should be setted by VNET_CRYPTO_ASYNC_OP_XX
-  | `36808 <https:////gerrit.fd.io/r/c/vpp/+/36808>`_ [Vec 55]: arp: add support for Microsoft NLB unicast
+  | `36808 <https:////gerrit.fd.io/r/c/vpp/+/36808>`_ [Vec 56]: arp: add support for Microsoft NLB unicast
   | `36880 <https:////gerrit.fd.io/r/c/vpp/+/36880>`_ [VeC 73]: ip: only set rx_sw_if_index when connection found to avoid following crash like tcp punt
   | `36812 <https:////gerrit.fd.io/r/c/vpp/+/36812>`_ [VeC 74]: cjson: json realloced output truncated if actual lenght more then 256
   | `36704 <https:////gerrit.fd.io/r/c/vpp/+/36704>`_ [VeC 88]: nat: auto forward inbound packet for local server session app with snat
@@ -1077,7 +1077,7 @@ Authors:
 
 **eyal bari** <royalbee@gmail.com>:
 
-  | `15596 <https:////gerrit.fd.io/r/c/vpp/+/15596>`_ [veC 1194]: l2_flood:bvi:use a full buffer copy
+  | `15596 <https:////gerrit.fd.io/r/c/vpp/+/15596>`_ [veC 1195]: l2_flood:bvi:use a full buffer copy
 
 **f00182600** <fangtong2007@163.com>:
 
@@ -1087,7 +1087,7 @@ Authors:
 
 **guanghua zhang** <zhangguanghua2011@163.com>:
 
-  | `22142 <https:////gerrit.fd.io/r/c/vpp/+/22142>`_ [veC 1050]: tcp: tcp_check_tx_offload get sw_if_index in a another way.
+  | `22142 <https:////gerrit.fd.io/r/c/vpp/+/22142>`_ [veC 1051]: tcp: tcp_check_tx_offload get sw_if_index in a another way.
   | `21628 <https:////gerrit.fd.io/r/c/vpp/+/21628>`_ [veC 1151]: vlib: fix pcap dispatch trace command issue.
 
 **han wu** <wuhan9084@163.com>:
@@ -1177,7 +1177,7 @@ Authors:
 **steven luong** <sluong@cisco.com>:
 
   | `37511 <https:////gerrit.fd.io/r/c/vpp/+/37511>`_ [vEC 0]: vxlan: convert vxlan to a plugin
-  | `37488 <https:////gerrit.fd.io/r/c/vpp/+/37488>`_ [vEC 4]: vhost: convert vhost device driver to a plugin
+  | `37488 <https:////gerrit.fd.io/r/c/vpp/+/37488>`_ [vEC 5]: vhost: convert vhost device driver to a plugin
   | `30866 <https:////gerrit.fd.io/r/c/vpp/+/30866>`_ [Vec 77]: bonding: Add failover-mac active support
   | `36250 <https:////gerrit.fd.io/r/c/vpp/+/36250>`_ [VeC 150]: classify: sanity check table index for update
   | `36089 <https:////gerrit.fd.io/r/c/vpp/+/36089>`_ [VeC 171]: ip: Display show ip table without truncation
@@ -1188,7 +1188,7 @@ Authors:
   | `32536 <https:////gerrit.fd.io/r/c/vpp/+/32536>`_ [veC 509]: bonding: create bond process on demand
   | `32486 <https:////gerrit.fd.io/r/c/vpp/+/32486>`_ [veC 514]: vhost: launch vhost process on demand
   | `32083 <https:////gerrit.fd.io/r/c/vpp/+/32083>`_ [veC 518]: interface: error checking and returning for set interface rx-mode
-  | `31452 <https:////gerrit.fd.io/r/c/vpp/+/31452>`_ [veC 605]: nat: remove ASSERT in nat_6t_flow_ip4_translate
+  | `31452 <https:////gerrit.fd.io/r/c/vpp/+/31452>`_ [veC 606]: nat: remove ASSERT in nat_6t_flow_ip4_translate
   | `31000 <https:////gerrit.fd.io/r/c/vpp/+/31000>`_ [veC 634]: vlib: add trace trajectory for debugging
   | `29396 <https:////gerrit.fd.io/r/c/vpp/+/29396>`_ [VeC 742]: bonding: automatically set interface to promiscuos for LACP bonding
   | `28105 <https:////gerrit.fd.io/r/c/vpp/+/28105>`_ [VeC 817]: dpdk: allocate rx_queues and tx_queues early
@@ -1197,9 +1197,9 @@ Authors:
 
 **sunitha naram reddy** <snaramre@cisco.com>:
 
-  | `23417 <https:////gerrit.fd.io/r/c/vpp/+/23417>`_ [Vec 687]: tests: scapy 2.4.3 changes
+  | `23417 <https:////gerrit.fd.io/r/c/vpp/+/23417>`_ [Vec 688]: tests: scapy 2.4.3 changes
   | `23131 <https:////gerrit.fd.io/r/c/vpp/+/23131>`_ [vec 1089]: tests: make test changes for scapy 2.4.3
-  | `21621 <https:////gerrit.fd.io/r/c/vpp/+/21621>`_ [veC 1151]: python3 string to byte conversions for udp tests
+  | `21621 <https:////gerrit.fd.io/r/c/vpp/+/21621>`_ [veC 1152]: python3 string to byte conversions for udp tests
 
 **vijayakumar rajamanickam** <vijayakumar.rajamanickam@nokia.com>:
 
