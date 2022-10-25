@@ -45,7 +45,7 @@ jobs:
         sed -i.bak '/^Latest VPP Gerrit Report:$/,$d' README.rst
         echo -e "Here is the latest VPP Gerrit Report:\n-------------------------------------" >> README.rst
         cp $(find . -name *report.rst | tail -1) VPP-GERRIT-REPORT.rst
-        cat VPP--GERRIT-REPORT.rst >> README.rst
+        cat VPP-GERRIT-REPORT.rst >> README.rst
         git config user.email "dwallacelf+ghjobs@gmail.com"
         git config user.name  "Dave Wallace (ghjobs)"
         git add VPP-GERRIT-REPORT.rst README.rst || true
