@@ -3,7 +3,7 @@
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Tuesday 2022-10-25, 00:44:07
+generated on Tuesday 2022-10-25, 00:58:07
 --------------------------------------------
 
 
@@ -770,9 +770,9 @@ Authors:
   | `19522 <https:////gerrit.fd.io/r/c/vpp/+/19522>`_ [Vec 1182]: api:  return errorcode cli_inband
   | `20266 <https:////gerrit.fd.io/r/c/vpp/+/20266>`_ [veC 1188]: tests: refactor CliFailedCommandError
   | `20484 <https:////gerrit.fd.io/r/c/vpp/+/20484>`_ [Vec 1188]: misc: add dependency info to commit template
-  | `20570 <https:////gerrit.fd.io/r/c/vpp/+/20570>`_ [veC 1194]: tests: limit time for VppTestCase to end after SIGTERM
+  | `20570 <https:////gerrit.fd.io/r/c/vpp/+/20570>`_ [veC 1195]: tests: limit time for VppTestCase to end after SIGTERM
   | `20619 <https:////gerrit.fd.io/r/c/vpp/+/20619>`_ [veC 1200]: tests: create PROFILE=1 CI job.
-  | `20616 <https:////gerrit.fd.io/r/c/vpp/+/20616>`_ [veC 1200]: tests: fix VppGbpContractRule
+  | `20616 <https:////gerrit.fd.io/r/c/vpp/+/20616>`_ [veC 1201]: tests: fix VppGbpContractRule
   | `20326 <https:////gerrit.fd.io/r/c/vpp/+/20326>`_ [veC 1207]: tests: - experiment--identify dup. object creation in tests.
   | `20160 <https:////gerrit.fd.io/r/c/vpp/+/20160>`_ [veC 1207]: gbp: add test for test_api_gbp_bridge_domain_add
   | `20414 <https:////gerrit.fd.io/r/c/vpp/+/20414>`_ [VeC 1211]: build:  Update .gitignore
