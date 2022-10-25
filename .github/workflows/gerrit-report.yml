@@ -42,9 +42,12 @@ jobs:
         SECRET_SSH_KEY: ${{ secrets.VPP_GERRIT_REPORT_PRIVATE_SSH_KEY }}
       run: |
         cd vpp-gerrit-report
+        sed -i.bak '/^Latest VPP Gerrit Report:$/,$d' README.rst
+        echo -e "Here is the latest VPP Gerrit Report:\n-------------------------------------" >> README.rst
         cp $(find . -name *report.rst | tail -1) VPP-GERRIT-REPORT.rst
+        cat VPP--GERRIT-REPORT.rst >> README.rst
         git config user.email "dwallacelf+ghjobs@gmail.com"
         git config user.name  "Dave Wallace (ghjobs)"
-        git add VPP-GERRIT-REPORT.rst || true
+        git add VPP-GERRIT-REPORT.rst README.rst || true
         git commit -a -m "Auto-update at $(date)"
         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin main'
