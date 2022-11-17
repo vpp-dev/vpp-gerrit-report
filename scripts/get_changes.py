@@ -29,7 +29,7 @@ def getjson(url, request):
 
 def get_changes_from_gerrit(branch):
     URL = "https://gerrit.fd.io/r"
-    request = f"/changes/?q=project:vpp+status:open+branch:{branch}+label:code-review>-2+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
+    request = f"/changes/?q=project:vpp+status:open+branch:{branch}+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
     changes = getjson(URL, request)
     last = changes[-1]
     batch_count = 500  # gerrit returns at most 500 entries at a time
