@@ -11,6 +11,7 @@ V - verified               v - not verified
 E - not expired            e - expired
 C - no unresolved comments c - comments not resolved
 R - reviewed/approved      r - review incomplete
+A - abandoned              A - gerrit.fd.io to restore
 # - days since update      # - days since update > 30
 ========================== ===========================
 
