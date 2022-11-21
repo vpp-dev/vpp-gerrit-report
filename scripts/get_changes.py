@@ -27,9 +27,9 @@ def getjson(url, request):
     return json.loads(r.text[5:])
 
 
-def get_changes_from_gerrit(branch):
+def get_changes_from_gerrit(project, branch):
     URL = "https://gerrit.fd.io/r"
-    request = f"/changes/?q=project:vpp+status:open+branch:{branch}+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
+    request = f"/changes/?q=project:{project}+status:open+branch:{branch}+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
     changes = getjson(URL, request)
     last = changes[-1]
     batch_count = 500  # gerrit returns at most 500 entries at a time
@@ -47,10 +47,11 @@ def get_changes_from_gerrit(branch):
 def main():
     parser = argparse.ArgumentParser(description="VPP Gerrit changes download")
     parser.add_argument("outfile", type=argparse.FileType("w"))
+    parser.add_argument("-project", default="vpp")
     parser.add_argument("-branch", default="master")
     args = parser.parse_args()
 
-    changes = get_changes_from_gerrit(args.branch)
+    changes = get_changes_from_gerrit(args.project, args.branch)
     json.dump(changes, args.outfile)
     args.outfile.close()
 
