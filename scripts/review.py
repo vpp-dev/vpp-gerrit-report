@@ -24,6 +24,7 @@ from datetime import datetime
 from io import StringIO
 import dateutil.parser
 import requests
+import subprocess
 from pprint import pprint
 
 # TODO:
@@ -32,6 +33,19 @@ from pprint import pprint
 # 3. Send email nag-o-grams to authors?
 # 4. Prettier reports both for maintainers and authors
 # 5. How to deal with unmaintained files and components?
+
+
+def abandon_gerrit_change(project, branch, abandon_days, current_revision):
+    "Abandon the specified gerrit change"
+    #    print(f'ssh dwallacelf@gerrit.fd.io -p 29418 \'gerrit review 0be6687c2c4dbb1188fbcb10e4ab90d0941aa662 --abandon -m "Auto-abandoned due to last-update-days >= {abandon_days}"\'')
+    ssh_cmd = [
+        "ssh",
+        "dwallacelf@gerrit.fd.io",
+        "-p",
+        "29418",
+        f'gerrit review {current_revision} --abandon -m "by https://github.com/vpp-dev/vpp-gerrit-report script due to last-update-days >= {abandon_days}"',
+    ]
+    subprocess.run(ssh_cmd)
 
 
 def get_maintainers_from_git():
@@ -157,11 +171,14 @@ def process_reviews(features, reviews, components):
 authorstream = {}
 maintainerstream = {}
 committerstream = {}
+abandonstream = {}
 
 
 def get_stream(assigneetype, name):
     """Put different assignees on different IO streams for reporting"""
-    if assigneetype == "author":
+    if assigneetype == "abandon":
+        st = abandonstream
+    elif assigneetype == "author":
         st = authorstream
     elif assigneetype == "maintainer":
         st = maintainerstream
@@ -186,6 +203,7 @@ V - verified               v - not verified
 E - not expired            e - expired
 C - no unresolved comments c - comments not resolved
 R - reviewed/approved      r - review incomplete
+A - abandoned              A - gerrit.fd.io to restore
 # - days since update      # - days since update > 30
 ========================== ===========================
 
@@ -198,13 +216,22 @@ Example: [VECr 23]
 """
 
 
-def print_report(report):
+def print_report(project, branch, abandon_days, report):
     """Sort by author / component or committable"""
     no_authors = 0
     no_committers = 0
     no_maintainers = 0
+    no_abandon = 0
     for r in report:
-        if r["assignee"] == "author":
+        if r["assignee"] == "abandon":
+            st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
+            st.write(
+                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
+            )
+            abandon_gerrit_change(project, branch, abandon_days, r["current_revision"])
+            no_abandon += 1
+        elif r["assignee"] == "author":
             st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
             st.write(
                 f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
@@ -258,37 +285,57 @@ FD.io VPP (master branch) Gerrit Change Report
 generated on {datetime.now().strftime('%A %Y-%m-%d, %H:%M:%S')}
 --------------------------------------------
 """
+    # generate header
     print(header)
     print(legend)
 
-    print(
-        "\nCommitters:"
-        "\n-----------"
-        "\n| **These gerrit changes have been**\n"
-        "\n    - Verified"
-        "\n    - Not expired"
-        "\n    - Comments resolved"
-        "\n    - Approved by Maintainers"
-        "\n\n| **Please perform a final review & submit.**"
-    )
-    for _, st in committerstream.items():
-        print(st.getvalue())
-    print(
-        "\nMaintainers:\n------------"
-        "\n| **Please review these gerrit changes.**"
-        "\n\n| **NOTE: Gerrit changes may be included under more than one feature based"
-        " on the modified files regardless of the feature list included on the commit headline.**"
-    )
-    for st in sorted(maintainerstream):
-        print(maintainerstream[st].getvalue())
-    print(
-        "\nAuthors:"
-        "\n--------"
-        "\n**Please rebase and fix verification failures on these gerrit changes.**"
-    )
-    for st in sorted(authorstream):
-        print(f"{st}:")
-        print(authorstream[st].getvalue())
+    # generate committers list
+    if no_committers > 0:
+        print(
+            "\nCommitters:"
+            "\n-----------"
+            "\n| **These gerrit changes have been**\n"
+            "\n    - Verified"
+            "\n    - Not expired"
+            "\n    - Comments resolved"
+            "\n    - Approved by Maintainers"
+            "\n\n| **Please perform a final review & submit.**"
+        )
+        for _, st in committerstream.items():
+            print(st.getvalue())
+
+    # generate maintainers list
+    if no_maintainers > 0:
+        print(
+            "\nMaintainers:\n------------"
+            "\n| **Please review these gerrit changes.**"
+            "\n\n| **NOTE: Gerrit changes may be included under more than one feature based"
+            " on the modified files regardless of the feature list included on the commit headline.**"
+        )
+        for st in sorted(maintainerstream):
+            print(maintainerstream[st].getvalue())
+
+    # generate authors list
+    if no_authors > 0:
+        print(
+            "\nAuthors:"
+            "\n--------"
+            "\n**Please rebase and fix verification failures on these gerrit changes.**"
+        )
+        for st in sorted(authorstream):
+            print(f"{st}:")
+            print(authorstream[st].getvalue())
+
+    # generate abandoned list
+    if no_abandon > 0:
+        print(
+            "\nAbandoned:"
+            "\n----------"
+            f"\n**The following gerrit changes have not been updated in over {abandon_days} days and have been abandoned.**"
+        )
+        for st in sorted(abandonstream):
+            print(f"{st}:")
+            print(abandonstream[st].getvalue())
 
     print(legend)
 
@@ -301,6 +348,7 @@ Patches assigned
 authors          {no_authors}
 maintainers      {no_maintainers}
 committers       {no_committers}
+abandoned        {no_abandon}
 ================ ===
 """
     print(statistics)
@@ -327,6 +375,9 @@ def main():
         "--maintainers-file", type=argparse.FileType("r"), required=True
     )
     parser.add_argument("--changes-file", type=argparse.FileType("r"), required=True)
+    parser.add_argument("--project", default="vpp")
+    parser.add_argument("--branch", default="master")
+    parser.add_argument("--abandon-days", type=int, default=180)
     args = parser.parse_args()
 
     # MAINTAINERS
@@ -340,6 +391,7 @@ def main():
     report = []
     for change in c:
         s = {}
+        s["current_revision"] = change["current_revision"]
         s["is_verified"] = get_is_verified(change)
         s["subject"] = change["subject"]
         s["unresolved_comment_count"] = change["unresolved_comment_count"]
@@ -358,6 +410,8 @@ def main():
             reviews = {}
         last_updated = dateutil.parser.parse(change["updated"])
         s["last_updated_days"] = (datetime.now() - last_updated).days
+        if s["last_updated_days"] < 0:
+            s["last_updated_days"] = 0
 
         # Find maintainer
         rev = next(iter(change["revisions"]))
@@ -381,22 +435,28 @@ def main():
         # Find assignee
         status = ""
         assignee = "author"
-        status += "V" if s["is_verified"] else "v"
-        status += "E" if s["last_updated_days"] <= 30 else "e"
-        status += "C" if s["unresolved_comment_count"] == 0 else "c"
+        # DEBUG: Limit abandoning to DAW test gerrit change
+        # if s["last_updated_days"] >= args.abandon_days:
+        if s["number"] == 37088:
+            assignee = "abandon"
+            status += "A"
+        else:
+            status += "V" if s["is_verified"] else "v"
+            status += "E" if s["last_updated_days"] <= 30 else "e"
+            status += "C" if s["unresolved_comment_count"] == 0 else "c"
 
-        if status.isupper():  # Author has done all required
-            assignee = "maintainer"
-            status += "r" if s["missing_reviews_from"] else "R"
+            if status.isupper():  # Author has done all required
+                assignee = "maintainer"
+                status += "r" if s["missing_reviews_from"] else "R"
 
-            if not s["missing_reviews_from"]:
-                assignee = "committer"
+                if not s["missing_reviews_from"]:
+                    assignee = "committer"
 
         s["assignee"] = assignee
         s["status"] = status
         report.append(s)
 
-    print_report(report)
+    print_report(args.project, args.branch, args.abandon_days, report)
 
 
 if __name__ == "__main__":
