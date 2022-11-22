@@ -31,7 +31,7 @@ jobs:
         sudo chown $(whoami) /run/user/$(id -u)
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
-        ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-gerrit-report.git'
+        ssh-agent bash -c 'ssh-add secret_ssh_key; ssh-add -L; git clone git@github.com:vpp-dev/vpp-gerrit-report.git'
 
     - name: Generate VPP Gerrit Change Report
       run: |
