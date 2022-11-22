@@ -43,6 +43,8 @@ def abandon_gerrit_change(project, branch, abandon_days, current_revision):
         "dwallacelf@gerrit.fd.io",
         "-p",
         "29418",
+        "-o",
+        "StrictHostKeyChecking=No",
         f'gerrit review {current_revision} --abandon -m "by https://github.com/vpp-dev/vpp-gerrit-report script due to last-update-days >= {abandon_days}"',
     ]
     subprocess.run(ssh_cmd).check_returncode()
