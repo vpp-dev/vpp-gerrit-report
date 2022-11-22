@@ -28,12 +28,9 @@ def getjson(url, request):
 
 
 def get_changes_from_gerrit(project, branch):
-    # TODO: Remove after generating 1st full report -- this fixes testing bog-up
     URL = "https://gerrit.fd.io/r"
-    undocumented_request = f"/changes/?q=project:{project}+branch:{branch}+is:abandoned+-age:1day&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
-    changes = getjson(URL, undocumented_request)
     request = f"/changes/?q=project:{project}+status:open+branch:{branch}+-is:wip&o=LABELS&o=CURRENT_REVISION&o=CURRENT_FILES&o=DETAILED_ACCOUNTS&o=CHECK&o=SUBMITTABLE"
-    changes += getjson(URL, request)
+    changes = getjson(URL, request)
     last = changes[-1]
     batch_count = 500  # gerrit returns at most 500 entries at a time
     try:

@@ -34,67 +34,6 @@ from pprint import pprint
 # 4. Prettier reports both for maintainers and authors
 # 5. How to deal with unmaintained files and components?
 
-# TODO: Remove after generating 1st full report -- this fixes testing bog-up
-report_abandon = [
-    33727,
-    34873,
-    34866,
-    34919,
-    34963,
-    34684,
-    33707,
-    33507,
-    34635,
-    34899,
-    34897,
-    34898,
-    33607,
-    13134,
-    28083,
-    32435,
-    35157,
-    35212,
-    35218,
-    35224,
-    35227,
-    35155,
-    35289,
-    35291,
-    35234,
-    35352,
-    35353,
-    35355,
-    35364,
-    35367,
-    35361,
-    29862,
-    35436,
-    35563,
-    34844,
-    35680,
-    35707,
-    35756,
-    35739,
-    34800,
-    35796,
-    35912,
-    34694,
-    35927,
-    35916,
-    35955,
-    28513,
-    36042,
-    36062,
-    36067,
-    36089,
-    36133,
-    36128,
-    35934,
-    35914,
-    36186,
-    36142,
-]
-
 
 def abandon_gerrit_change(project, branch, abandon_days, current_revision):
     "Abandon the specified gerrit change"
@@ -502,7 +441,7 @@ def main():
         # Find assignee
         status = ""
         assignee = "author"
-        if s["last_updated_days"] >= args.abandon_days or s["number"] in report_abandon:
+        if s["last_updated_days"] >= args.abandon_days:
             assignee = "abandon"
             status += "A"
         else:
