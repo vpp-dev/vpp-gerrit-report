@@ -35,7 +35,7 @@ jobs:
 
     - name: Generate VPP Gerrit Change Report
       run: |
-        ssh-agent bash -c 'ssh-add secret_ssh_key; ssh-add -L; ./vpp-gerrit-report/scripts/vpp_gerrit_report.sh'
+        ssh-agent bash -c 'ssh-add secret_ssh_key; ./vpp-gerrit-report/scripts/vpp_gerrit_report.sh'
 
     - name: Push the new report
       run: |
