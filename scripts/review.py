@@ -34,10 +34,70 @@ from pprint import pprint
 # 4. Prettier reports both for maintainers and authors
 # 5. How to deal with unmaintained files and components?
 
+# TODO: Remove after generating 1st full report -- this fixes testing bog-up
+report_abandon = [
+    33727,
+    34873,
+    34866,
+    34919,
+    34963,
+    34684,
+    33707,
+    33507,
+    34635,
+    34899,
+    34897,
+    34898,
+    33607,
+    13134,
+    28083,
+    32435,
+    35157,
+    35212,
+    35218,
+    35224,
+    35227,
+    35155,
+    35289,
+    35291,
+    35234,
+    35352,
+    35353,
+    35355,
+    35364,
+    35367,
+    35361,
+    29862,
+    35436,
+    35563,
+    34844,
+    35680,
+    35707,
+    35756,
+    35739,
+    34800,
+    35796,
+    35912,
+    34694,
+    35927,
+    35916,
+    35955,
+    28513,
+    36042,
+    36062,
+    36067,
+    36089,
+    36133,
+    36128,
+    35934,
+    35914,
+    36186,
+    36142,
+]
+
 
 def abandon_gerrit_change(project, branch, abandon_days, current_revision):
     "Abandon the specified gerrit change"
-    #    print(f'ssh dwallacelf@gerrit.fd.io -p 29418 \'gerrit review 0be6687c2c4dbb1188fbcb10e4ab90d0941aa662 --abandon -m "Auto-abandoned due to last-update-days >= {abandon_days}"\'')
     ssh_cmd = [
         "ssh",
         "dwallacelf@gerrit.fd.io",
@@ -228,10 +288,13 @@ def print_report(project, branch, abandon_days, report):
         if r["assignee"] == "abandon":
             st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
             st.write(
-                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
-                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
+                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ {r["subject"]}'
             )
-            abandon_gerrit_change(project, branch, abandon_days, r["current_revision"])
+            if r["change_status"] != "ABANDONED":
+                abandon_gerrit_change(
+                    project, branch, abandon_days, r["current_revision"]
+                )
+
             no_abandon += 1
         elif r["assignee"] == "author":
             st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
@@ -394,6 +457,7 @@ def main():
     for change in c:
         s = {}
         s["current_revision"] = change["current_revision"]
+        s["change_status"] = change["status"]
         s["is_verified"] = get_is_verified(change)
         s["subject"] = change["subject"]
         s["unresolved_comment_count"] = change["unresolved_comment_count"]
@@ -437,9 +501,7 @@ def main():
         # Find assignee
         status = ""
         assignee = "author"
-        # DEBUG: Limit abandoning to DAW test gerrit change
-        # if s["last_updated_days"] >= args.abandon_days:
-        if s["number"] == 37088:
+        if s["last_updated_days"] >= args.abandon_days or s["number"] in report_abandon:
             assignee = "abandon"
             status += "A"
         else:
