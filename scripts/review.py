@@ -291,10 +291,10 @@ def print_report(project, branch, abandon_days, report):
                 f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
                 f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
             )
-#            if r["change_status"] != "ABANDONED":
-#                abandon_gerrit_change(
-#                    project, branch, abandon_days, r["current_revision"]
-#                )
+            if r["change_status"] != "ABANDONED":
+                abandon_gerrit_change(
+                    project, branch, abandon_days, r["current_revision"]
+                )
 
             no_abandon += 1
         elif r["assignee"] == "author":
