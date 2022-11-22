@@ -288,12 +288,13 @@ def print_report(project, branch, abandon_days, report):
         if r["assignee"] == "abandon":
             st, new = get_stream(r["assignee"], f'\n{r["owner"]}')
             st.write(
-                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ {r["subject"]}'
+                f'\n  | `{r["number"]} <https:////gerrit.fd.io/r/c/vpp/+/{r["number"]}>`_ '
+                f'[{r["status"]} {r["last_updated_days"]}]: {r["subject"]}'
             )
-            if r["change_status"] != "ABANDONED":
-                abandon_gerrit_change(
-                    project, branch, abandon_days, r["current_revision"]
-                )
+#            if r["change_status"] != "ABANDONED":
+#                abandon_gerrit_change(
+#                    project, branch, abandon_days, r["current_revision"]
+#                )
 
             no_abandon += 1
         elif r["assignee"] == "author":
