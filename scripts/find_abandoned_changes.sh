@@ -51,7 +51,7 @@ for git_id in $abandon_report_ids ; do
             author_heading="$found_author"
             echo -e "\n$author_heading\n"
         fi
-        echo "Found in $report at git id: $git_id"
+        echo "Found in https://github.com/vpp-dev/vpp-gerrit-report/blob/$git_id/VPP-GERRIT-REPORT.rst"
         sed '1,/Abandoned:/ {/Abandoned:/!d;}' $report | sed "1,/$email/ {/$email/!d}" | sed -n '3,/^$/ {/.*/p}' | sed 's/^$//g'
     fi
 done
