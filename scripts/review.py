@@ -147,8 +147,10 @@ def is_reviewed(feature, reviews):
         if isinstance(v, dict):
             if "display_name" in v:
                 name = v["display_name"]
-            else:
+            elif "name" in v:
                 name = v["name"]
+            else:
+                continue
 
             # Is person a reviewer of given feature?
             if match_maintainer(feature["M"], name):
