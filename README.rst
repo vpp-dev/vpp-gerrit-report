@@ -43,7 +43,7 @@ Here is the latest VPP Gerrit Report:
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Monday 2023-04-10, 21:07:06
+generated on Tuesday 2023-04-11, 02:09:21
 --------------------------------------------
 
 
@@ -90,7 +90,7 @@ Maintainers:
 | **NOTE: Gerrit changes may be included under more than one feature based on the modified files regardless of the feature list included on the commit headline.**
 
 api: **Dave Barach** <vpp@barachs.net>
-  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 20]: api: fix mp-safe mark for some messages and add more
+  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 21]: api: fix mp-safe mark for some messages and add more
 
 build: **Damjan Marion** <damarion@cisco.com>
   | `35638 <https:////gerrit.fd.io/r/c/vpp/+/35638>`_ [VECr 25]: fateshare: a plugin for managing child processes
@@ -118,7 +118,7 @@ hash: **Mohsin Kazmi** <sykazmi@cisco.com>, **Damjan Marion** <damarion@cisco.co
   | `38636 <https:////gerrit.fd.io/r/c/vpp/+/38636>`_ [VECr 5]: misc: change of address
 
 ip6: **Neale Ranns** <neale@graphiant.com>, **Jon Loeliger** <jdl@netgate.com>
-  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 20]: api: fix mp-safe mark for some messages and add more
+  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 21]: api: fix mp-safe mark for some messages and add more
 
 ipsec: **Neale Ranns** <neale@graphiant.com>, **Radu Nicolau** <radu.nicolau@intel.com>, **Fan Zhang** <roy.fan.zhang@intel.com>
   | `38528 <https:////gerrit.fd.io/r/c/vpp/+/38528>`_ [VECr 11]: ipsec: manually binding an SA to a worker
@@ -126,18 +126,18 @@ ipsec: **Neale Ranns** <neale@graphiant.com>, **Radu Nicolau** <radu.nicolau@int
   | `38500 <https:////gerrit.fd.io/r/c/vpp/+/38500>`_ [VECr 24]: ipsec: missing linear search when flow cache search failed
 
 l2: **John Lo** <lojultra2020@outlook.com>, **Steven Luong** <sluong@cisco.com>
-  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 20]: api: fix mp-safe mark for some messages and add more
+  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 21]: api: fix mp-safe mark for some messages and add more
 
 linux-cp: **Neale Ranns** <neale@graphiant.com>, **Matthew Smith** <mgsmith@netgate.com>
   | `38602 <https:////gerrit.fd.io/r/c/vpp/+/38602>`_ [VECr 4]: linux-cp: don't create tap for non-eth ifaces
   | `38456 <https:////gerrit.fd.io/r/c/vpp/+/38456>`_ [VECr 28]: linux-cp: auto select tap id when creating lcp pair
 
 memif: **Damjan Marion** <damarion@cisco.com>
-  | `38477 <https:////gerrit.fd.io/r/c/vpp/+/38477>`_ [VECr 4]: memif: support dma option
+  | `38477 <https:////gerrit.fd.io/r/c/vpp/+/38477>`_ [VECr 5]: memif: support dma option
 
 misc: **vpp-dev Mailing List** <vpp-dev@fd.io>
   | `38636 <https:////gerrit.fd.io/r/c/vpp/+/38636>`_ [VECr 5]: misc: change of address
-  | `38545 <https:////gerrit.fd.io/r/c/vpp/+/38545>`_ [VECr 17]: stats: check if stats vector entry is empty
+  | `38545 <https:////gerrit.fd.io/r/c/vpp/+/38545>`_ [VECr 18]: stats: check if stats vector entry is empty
   | `35638 <https:////gerrit.fd.io/r/c/vpp/+/35638>`_ [VECr 25]: fateshare: a plugin for managing child processes
   | `33455 <https:////gerrit.fd.io/r/c/vpp/+/33455>`_ [VECr 26]: ip_session_redirect: add session redirect plugin
 
@@ -186,14 +186,14 @@ vcl: **Florin Coras** <fcoras@cisco.com>
   | `37088 <https:////gerrit.fd.io/r/c/vpp/+/37088>`_ [VECr 17]: misc: patch to test CI infra changes
 
 vhost: **Steven Luong** <sluong@cisco.com>
-  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 20]: api: fix mp-safe mark for some messages and add more
+  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 21]: api: fix mp-safe mark for some messages and add more
 
 virtio: **Mohsin Kazmi** <sykazmi@cisco.com>, **Damjan Marion** <damarion@cisco.com>
   | `38636 <https:////gerrit.fd.io/r/c/vpp/+/38636>`_ [VECr 5]: misc: change of address
 
 vpp: **Dave Barach** <vpp@barachs.net>
-  | `38545 <https:////gerrit.fd.io/r/c/vpp/+/38545>`_ [VECr 17]: stats: check if stats vector entry is empty
-  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 20]: api: fix mp-safe mark for some messages and add more
+  | `38545 <https:////gerrit.fd.io/r/c/vpp/+/38545>`_ [VECr 18]: stats: check if stats vector entry is empty
+  | `38525 <https:////gerrit.fd.io/r/c/vpp/+/38525>`_ [VECr 21]: api: fix mp-safe mark for some messages and add more
 
 wireguard: **Artem Glazychev** <artem.glazychev@xored.com>, **Fan Zhang** <roy.fan.zhang@intel.com>
   | `38597 <https:////gerrit.fd.io/r/c/vpp/+/38597>`_ [VECr 11]: wireguard: add support for chained buffers
@@ -209,7 +209,7 @@ Authors:
 
 **Andrew Ying** <hi@andrewying.com>:
 
-  | `38064 <https:////gerrit.fd.io/r/c/vpp/+/38064>`_ [VeC 72]: dpdk: fix compatibility with DPDK < 21.11
+  | `38064 <https:////gerrit.fd.io/r/c/vpp/+/38064>`_ [VeC 73]: dpdk: fix compatibility with DPDK < 21.11
 
 **Andrew Yourtchenko** <ayourtch@gmail.com>:
 
@@ -298,7 +298,7 @@ Authors:
 
 **Matz von Finckenstein** <matz.vf@gmail.com>:
 
-  | `38091 <https:////gerrit.fd.io/r/c/vpp/+/38091>`_ [Vec 55]: stats: Updated go version URL for the install script Added log flag to pass in logging file destination as an alternate logging destination from syslog
+  | `38091 <https:////gerrit.fd.io/r/c/vpp/+/38091>`_ [Vec 56]: stats: Updated go version URL for the install script Added log flag to pass in logging file destination as an alternate logging destination from syslog
 
 **Maxime Peim** <mpeim@cisco.com>:
 
@@ -349,7 +349,7 @@ Authors:
 
 **Vladislav Grishenko** <themiron@mail.ru>:
 
-  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VEc 6]: mpls: fix possible crashes on tunnel create/delete
+  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VEc 7]: mpls: fix possible crashes on tunnel create/delete
   | `37263 <https:////gerrit.fd.io/r/c/vpp/+/37263>`_ [VeC 166]: nat: add nat44-ed session filtering by fib table
 
 **Vratko Polak** <vrpolak@cisco.com>:
@@ -384,17 +384,17 @@ Authors:
 
 **grimlock** <realbaseball2008@gmail.com>:
 
-  | `38440 <https:////gerrit.fd.io/r/c/vpp/+/38440>`_ [VeC 32]: nat: nat44-ed cli bug fix
+  | `38440 <https:////gerrit.fd.io/r/c/vpp/+/38440>`_ [VeC 33]: nat: nat44-ed cli bug fix
   | `38442 <https:////gerrit.fd.io/r/c/vpp/+/38442>`_ [VeC 33]: nat: nat44-ed bug fix
 
 **hui zhang** <zhanghui1715@gmail.com>:
 
-  | `38451 <https:////gerrit.fd.io/r/c/vpp/+/38451>`_ [veC 32]: vrrp: dump vrrp vr peer Type: fix
+  | `38451 <https:////gerrit.fd.io/r/c/vpp/+/38451>`_ [veC 33]: vrrp: dump vrrp vr peer Type: fix
 
 **jinshaohui** <jinsh11@chinatelecom.cn>:
 
   | `30929 <https:////gerrit.fd.io/r/c/vpp/+/30929>`_ [Vec 146]: vppinfra: fix memory issue in mhash
-  | `37297 <https:////gerrit.fd.io/r/c/vpp/+/37297>`_ [Vec 148]: ping: fix ping ipv6 address set packet size greater than  mtu,packet drop
+  | `37297 <https:////gerrit.fd.io/r/c/vpp/+/37297>`_ [Vec 149]: ping: fix ping ipv6 address set packet size greater than  mtu,packet drop
 
 **mahdi varasteh** <mahdy.varasteh@gmail.com>:
 
@@ -404,27 +404,6 @@ Authors:
 **vinay tripathi** <vinayx.tripathi@intel.com>:
 
   | `38497 <https:////gerrit.fd.io/r/c/vpp/+/38497>`_ [vEc 3]: crypto:  0UDP packet dropped when ipsec policy configured
-
-Abandoned:
-----------
-**The following gerrit changes have not been updated in over 180 days and have been abandoned.**
-
-**Kai Luo** <kailuo.nk@gmail.com>:
-
-  | `37269 <https:////gerrit.fd.io/r/c/vpp/+/37269>`_ [A 184]: memif: fix uninitialized variable warning
-
-**Mohammed HAWARI** <momohawari@gmail.com>:
-
-  | `33726 <https:////gerrit.fd.io/r/c/vpp/+/33726>`_ [A 180]: vlib: introduce an inter worker interrupts efds
-
-**Xiaoming Jiang** <jiangxiaoming@outlook.com>:
-
-  | `37376 <https:////gerrit.fd.io/r/c/vpp/+/37376>`_ [A 183]: vlib: unix cli - fix input's buffer may be freed when using
-  | `37375 <https:////gerrit.fd.io/r/c/vpp/+/37375>`_ [A 184]: ipsec: fix ipsec linked key not freed when sa deleted
-
-**steven luong** <sluong@cisco.com>:
-
-  | `37105 <https:////gerrit.fd.io/r/c/vpp/+/37105>`_ [A 180]: vppinfra: add time error counters to stats segment
 
 Legend:
 -------
@@ -455,6 +434,6 @@ Patches assigned
 authors          80
 maintainers      34
 committers       3
-abandoned        5
+abandoned        0
 ================ ===
 
