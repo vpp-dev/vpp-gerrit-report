@@ -3,7 +3,7 @@
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Monday 2023-10-09, 01:58:37
+generated on Tuesday 2023-10-10, 01:58:14
 --------------------------------------------
 
 
@@ -35,109 +35,109 @@ Maintainers:
 | **NOTE: Gerrit changes may be included under more than one feature based on the modified files regardless of the feature list included on the commit headline.**
 
 acl: **Andrew Yourtchenko** <ayourtch@gmail.com>
-  | `39151 <https:////gerrit.fd.io/r/c/vpp/+/39151>`_ [VECr 11]: build: test
+  | `39151 <https:////gerrit.fd.io/r/c/vpp/+/39151>`_ [VECr 12]: build: test
 
 avf: **Damjan Marion** <damarion@cisco.com>
-  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 10]: interface dpdk avf: introducing setting RSS hash key feature
-  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 16]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 11]: interface dpdk avf: introducing setting RSS hash key feature
+  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 17]: interface dpdk avf: introducing setting RSS hash key feature
 
-buffers: **Damjan Marion** <damarion@cisco.com>, **Dave Barach** <vpp@barachs.net>
-  | `39621 <https:////gerrit.fd.io/r/c/vpp/+/39621>`_ [VECr 2]: buffers: buffer allocation improvements
+build: **Damjan Marion** <damarion@cisco.com>
+  | `39629 <https:////gerrit.fd.io/r/c/vpp/+/39629>`_ [VECr 0]: build: Enable building on AlmaLinux 9
 
 dpdk: **Damjan Marion** <damarion@cisco.com>, **Mohammed Hawari** <mohammed@hawari.fr>
-  | `39583 <https:////gerrit.fd.io/r/c/vpp/+/39583>`_ [VECr 4]: dpdk: add Mellanox BlueField NICs
-  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 10]: interface dpdk avf: introducing setting RSS hash key feature
-  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 10]: interface dpdk: refactor RSS queues feature
-  | `39586 <https:////gerrit.fd.io/r/c/vpp/+/39586>`_ [VECr 12]: dpdk: fix description for mlx5_pci driver
-  | `39581 <https:////gerrit.fd.io/r/c/vpp/+/39581>`_ [VECr 13]: dpdk: correct the printing of Rx offloading flags
-  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 16]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39583 <https:////gerrit.fd.io/r/c/vpp/+/39583>`_ [VECr 5]: dpdk: add Mellanox BlueField NICs
+  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 11]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 11]: interface dpdk: refactor RSS queues feature
+  | `39586 <https:////gerrit.fd.io/r/c/vpp/+/39586>`_ [VECr 13]: dpdk: fix description for mlx5_pci driver
+  | `39581 <https:////gerrit.fd.io/r/c/vpp/+/39581>`_ [VECr 14]: dpdk: correct the printing of Rx offloading flags
+  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 17]: interface dpdk avf: introducing setting RSS hash key feature
 
 ethernet: **Dave Barach** <vpp@barachs.net>, **Damjan Marion** <damarion@cisco.com>
-  | `38860 <https:////gerrit.fd.io/r/c/vpp/+/38860>`_ [VECr 5]: ethernet: run callbacks for subifs too when mac changes
-  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 10]: interface dpdk avf: introducing setting RSS hash key feature
-  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 10]: interface dpdk: refactor RSS queues feature
+  | `38860 <https:////gerrit.fd.io/r/c/vpp/+/38860>`_ [VECr 6]: ethernet: run callbacks for subifs too when mac changes
+  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 11]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 11]: interface dpdk: refactor RSS queues feature
 
 fib: **Neale Ranns** <neale@graphiant.com>
-  | `39555 <https:////gerrit.fd.io/r/c/vpp/+/39555>`_ [VECr 5]: nat: fix nat44-ed address removal from fib
-  | `38524 <https:////gerrit.fd.io/r/c/vpp/+/38524>`_ [VECr 12]: fib: fix interface resolve from unlinked fib entries
-  | `39579 <https:////gerrit.fd.io/r/c/vpp/+/39579>`_ [VECr 12]: fib: ensure mpls dpo index is valid for its next node
-  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 12]: fib: fix udp encap mp-safe ops and id validation
-  | `39525 <https:////gerrit.fd.io/r/c/vpp/+/39525>`_ [VECr 24]: fib: log an error when destroying non-empty tables
+  | `39555 <https:////gerrit.fd.io/r/c/vpp/+/39555>`_ [VECr 6]: nat: fix nat44-ed address removal from fib
+  | `38524 <https:////gerrit.fd.io/r/c/vpp/+/38524>`_ [VECr 13]: fib: fix interface resolve from unlinked fib entries
+  | `39579 <https:////gerrit.fd.io/r/c/vpp/+/39579>`_ [VECr 13]: fib: ensure mpls dpo index is valid for its next node
+  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 13]: fib: fix udp encap mp-safe ops and id validation
+  | `39525 <https:////gerrit.fd.io/r/c/vpp/+/39525>`_ [VECr 25]: fib: log an error when destroying non-empty tables
 
 flowprobe: **Ole Troan** <otroan@employees.org>
-  | `39606 <https:////gerrit.fd.io/r/c/vpp/+/39606>`_ [VECr 4]: flowprobe: fix corrupted packets sent after feature disabling
+  | `39606 <https:////gerrit.fd.io/r/c/vpp/+/39606>`_ [VECr 5]: flowprobe: fix corrupted packets sent after feature disabling
 
 geneve: **community** vpp-dev@lists.fd.io
-  | `39477 <https:////gerrit.fd.io/r/c/vpp/+/39477>`_ [VECr 18]: geneve: support custom options in decap
+  | `39477 <https:////gerrit.fd.io/r/c/vpp/+/39477>`_ [VECr 19]: geneve: support custom options in decap
 
 gtpu: **Hongjun Ni** <hongjun.ni@intel.com>
-  | `38573 <https:////gerrit.fd.io/r/c/vpp/+/38573>`_ [VECr 4]: gtpu: support non-G-PDU packets and PDU Session
+  | `38573 <https:////gerrit.fd.io/r/c/vpp/+/38573>`_ [VECr 5]: gtpu: support non-G-PDU packets and PDU Session
 
 hs-test: **Florin Coras** <fcoras@cisco.com>, **Filip Tehlar** <ftehlar@cisco.com>, **Maros Ondrejicka** <maros.ondrejicka@pantheon.tech>
-  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 4]: hsa: unify echo test setup
+  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 5]: hsa: unify echo test setup
 
 hsa: **Florin Coras** <fcoras@cisco.com>, **Dave Wallace** <dwallacelf@gmail.com>, **Aloys Augustin** <aloaugus@cisco.com>, **Nathan Skrzypczak** <nathan.skrzypczak@gmail.com>
-  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 4]: hsa: unify echo test setup
+  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 5]: hsa: unify echo test setup
 
 interface: **Dave Barach** <vpp@barachs.net>
-  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 10]: interface dpdk avf: introducing setting RSS hash key feature
-  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 10]: interface dpdk: refactor RSS queues feature
-  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 16]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 11]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39590 <https:////gerrit.fd.io/r/c/vpp/+/39590>`_ [VECr 11]: interface dpdk: refactor RSS queues feature
+  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 17]: interface dpdk avf: introducing setting RSS hash key feature
 
 ip-neighbor: **Neale Ranns** <neale@graphiant.com>
-  | `39316 <https:////gerrit.fd.io/r/c/vpp/+/39316>`_ [VECr 19]: ip-neighbor: add version 3 of neighbor event
+  | `39316 <https:////gerrit.fd.io/r/c/vpp/+/39316>`_ [VECr 20]: ip-neighbor: add version 3 of neighbor event
 
 ip6: **Neale Ranns** <neale@graphiant.com>, **Jon Loeliger** <jdl@netgate.com>
-  | `39615 <https:////gerrit.fd.io/r/c/vpp/+/39615>`_ [VECr 3]: ip: fix crash in ip4_neighbor_advertise
-
-ipsec: **Neale Ranns** <neale@graphiant.com>, **Radu Nicolau** <radu.nicolau@intel.com>, **Fan Zhang** <fanzhang.oss@gmail.com>
-  | `38791 <https:////gerrit.fd.io/r/c/vpp/+/38791>`_ [VECr 4]: ipsec: move udp/esp packet processing in the inline function ipsec_udp_encap_esp_packet_process
+  | `39615 <https:////gerrit.fd.io/r/c/vpp/+/39615>`_ [VECr 4]: ip: fix crash in ip4_neighbor_advertise
 
 l2: **John Lo** <lojultra2020@outlook.com>, **Steven Luong** <sluong@cisco.com>
-  | `39613 <https:////gerrit.fd.io/r/c/vpp/+/39613>`_ [VECr 3]: l2: fix crash while sending traffic out orphan BVI
+  | `39613 <https:////gerrit.fd.io/r/c/vpp/+/39613>`_ [VECr 4]: l2: fix crash while sending traffic out orphan BVI
 
 libmemif: **Damjan Marion** <damarion@cisco.com>
-  | `37953 <https:////gerrit.fd.io/r/c/vpp/+/37953>`_ [VECr 7]: libmemif: added tests
-  | `39266 <https:////gerrit.fd.io/r/c/vpp/+/39266>`_ [VECr 7]: libmemif: fix segfault and buffer overflow in examples
+  | `37953 <https:////gerrit.fd.io/r/c/vpp/+/37953>`_ [VECr 8]: libmemif: added tests
+  | `39266 <https:////gerrit.fd.io/r/c/vpp/+/39266>`_ [VECr 8]: libmemif: fix segfault and buffer overflow in examples
 
 linux-cp: **Neale Ranns** <neale@graphiant.com>, **Matthew Smith** <mgsmith@netgate.com>
-  | `39622 <https:////gerrit.fd.io/r/c/vpp/+/39622>`_ [VECr 2]: linux-cp: Fix looping netlink messages
-  | `39518 <https:////gerrit.fd.io/r/c/vpp/+/39518>`_ [VECr 16]: linux-cp: Add VRF synchronization
+  | `39622 <https:////gerrit.fd.io/r/c/vpp/+/39622>`_ [VECr 3]: linux-cp: Fix looping netlink messages
+  | `39518 <https:////gerrit.fd.io/r/c/vpp/+/39518>`_ [VECr 17]: linux-cp: Add VRF synchronization
 
 memif: **Damjan Marion** <damarion@cisco.com>
-  | `39619 <https:////gerrit.fd.io/r/c/vpp/+/39619>`_ [VECr 2]: memif: contention between memif_disconnect and memif RX/TX threads
+  | `39619 <https:////gerrit.fd.io/r/c/vpp/+/39619>`_ [VECr 0]: memif: contention between memif_disconnect and memif RX/TX threads
 
 misc: **vpp-dev Mailing List** <vpp-dev@fd.io>
-  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 10]: interface dpdk avf: introducing setting RSS hash key feature
-  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 16]: interface dpdk avf: introducing setting RSS hash key feature
+  | `39549 <https:////gerrit.fd.io/r/c/vpp/+/39549>`_ [VECr 11]: interface dpdk avf: introducing setting RSS hash key feature
+  | `38304 <https:////gerrit.fd.io/r/c/vpp/+/38304>`_ [VECr 17]: interface dpdk avf: introducing setting RSS hash key feature
 
 mpls: **Neale Ranns** <neale@graphiant.com>
-  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VECr 12]: mpls: fix crashes on mpls tunnel create/delete
+  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VECr 13]: mpls: fix crashes on mpls tunnel create/delete
 
 nat: **Ole Troan** <ot@cisco.com>, **Filip Varga** <fivarga@cisco.com>, **Klement Sekera** <klement.sekera@gmail.com>
-  | `39576 <https:////gerrit.fd.io/r/c/vpp/+/39576>`_ [VECr 14]: nat: add ipfix rate-limiter for nat44-ed, nat44-ei and nat64
+  | `39576 <https:////gerrit.fd.io/r/c/vpp/+/39576>`_ [VECr 15]: nat: add ipfix rate-limiter for nat44-ed, nat44-ei and nat64
 
 session: **Florin Coras** <fcoras@cisco.com>
-  | `39449 <https:////gerrit.fd.io/r/c/vpp/+/39449>`_ [VECr 18]: session: program rx events only if none are pending
+  | `39449 <https:////gerrit.fd.io/r/c/vpp/+/39449>`_ [VECr 19]: session: program rx events only if none are pending
 
 tests: **Klement Sekera** <klement.sekera@gmail.com>, **Paul Vinciguerra** <pvinci@vinciconsulting.com>
-  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 4]: hsa: unify echo test setup
-  | `39606 <https:////gerrit.fd.io/r/c/vpp/+/39606>`_ [VECr 4]: flowprobe: fix corrupted packets sent after feature disabling
-  | `39555 <https:////gerrit.fd.io/r/c/vpp/+/39555>`_ [VECr 5]: nat: fix nat44-ed address removal from fib
-  | `38860 <https:////gerrit.fd.io/r/c/vpp/+/38860>`_ [VECr 5]: ethernet: run callbacks for subifs too when mac changes
-  | `39319 <https:////gerrit.fd.io/r/c/vpp/+/39319>`_ [VECr 12]: tests: memif ethernet type interface tests
-  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VECr 12]: mpls: fix crashes on mpls tunnel create/delete
-  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 12]: fib: fix udp encap mp-safe ops and id validation
-  | `39576 <https:////gerrit.fd.io/r/c/vpp/+/39576>`_ [VECr 14]: nat: add ipfix rate-limiter for nat44-ed, nat44-ei and nat64
-  | `39477 <https:////gerrit.fd.io/r/c/vpp/+/39477>`_ [VECr 18]: geneve: support custom options in decap
-  | `39321 <https:////gerrit.fd.io/r/c/vpp/+/39321>`_ [VECr 19]: tests: fix issues found when enabling DMAC check
-  | `39316 <https:////gerrit.fd.io/r/c/vpp/+/39316>`_ [VECr 19]: ip-neighbor: add version 3 of neighbor event
+  | `39480 <https:////gerrit.fd.io/r/c/vpp/+/39480>`_ [VECr 5]: hsa: unify echo test setup
+  | `39606 <https:////gerrit.fd.io/r/c/vpp/+/39606>`_ [VECr 5]: flowprobe: fix corrupted packets sent after feature disabling
+  | `39555 <https:////gerrit.fd.io/r/c/vpp/+/39555>`_ [VECr 6]: nat: fix nat44-ed address removal from fib
+  | `38860 <https:////gerrit.fd.io/r/c/vpp/+/38860>`_ [VECr 6]: ethernet: run callbacks for subifs too when mac changes
+  | `39319 <https:////gerrit.fd.io/r/c/vpp/+/39319>`_ [VECr 13]: tests: memif ethernet type interface tests
+  | `38245 <https:////gerrit.fd.io/r/c/vpp/+/38245>`_ [VECr 13]: mpls: fix crashes on mpls tunnel create/delete
+  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 13]: fib: fix udp encap mp-safe ops and id validation
+  | `39576 <https:////gerrit.fd.io/r/c/vpp/+/39576>`_ [VECr 15]: nat: add ipfix rate-limiter for nat44-ed, nat44-ei and nat64
+  | `39477 <https:////gerrit.fd.io/r/c/vpp/+/39477>`_ [VECr 19]: geneve: support custom options in decap
+  | `39321 <https:////gerrit.fd.io/r/c/vpp/+/39321>`_ [VECr 20]: tests: fix issues found when enabling DMAC check
+  | `39316 <https:////gerrit.fd.io/r/c/vpp/+/39316>`_ [VECr 20]: ip-neighbor: add version 3 of neighbor event
 
 udp: **Florin Coras** <fcoras@cisco.com>
-  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 12]: fib: fix udp encap mp-safe ops and id validation
+  | `39580 <https:////gerrit.fd.io/r/c/vpp/+/39580>`_ [VECr 13]: fib: fix udp encap mp-safe ops and id validation
 
 vcl: **Florin Coras** <fcoras@cisco.com>
-  | `37088 <https:////gerrit.fd.io/r/c/vpp/+/37088>`_ [VECr 6]: misc: patch to test CI infra changes
+  | `37088 <https:////gerrit.fd.io/r/c/vpp/+/37088>`_ [VECr 7]: misc: patch to test CI infra changes
+
+vppinfra: **Dave Barach** <vpp@barachs.net>
+  | `39630 <https:////gerrit.fd.io/r/c/vpp/+/39630>`_ [VECr 0]: vppinfra: fix coverity issue CID 323952
 
 Authors:
 --------
@@ -145,157 +145,162 @@ Authors:
 
 ** Chiso Gao** <chiso.gao@gmail.com>:
 
-  | `37153 <https:////gerrit.fd.io/r/c/vpp/+/37153>`_ [VeC 32]: nat: nat44-ed get out2in workers failed for static mapping without port
+  | `37153 <https:////gerrit.fd.io/r/c/vpp/+/37153>`_ [VeC 33]: nat: nat44-ed get out2in workers failed for static mapping without port
 
 ** Lawrence chen** <326942298@qq.com>:
 
-  | `39282 <https:////gerrit.fd.io/r/c/vpp/+/39282>`_ [veC 72]: api trace: the api trace info about barrier is opposite
-  | `39281 <https:////gerrit.fd.io/r/c/vpp/+/39281>`_ [veC 72]: api trace: the api trace info about barrier is opposite
+  | `39282 <https:////gerrit.fd.io/r/c/vpp/+/39282>`_ [veC 73]: api trace: the api trace info about barrier is opposite
+  | `39281 <https:////gerrit.fd.io/r/c/vpp/+/39281>`_ [veC 73]: api trace: the api trace info about barrier is opposite
 
 **Alexander Skorichenko** <askorichenko@netgate.com>:
 
-  | `39220 <https:////gerrit.fd.io/r/c/vpp/+/39220>`_ [VeC 66]: linux-cp: Fix update on IPv4 routes
+  | `39220 <https:////gerrit.fd.io/r/c/vpp/+/39220>`_ [VeC 67]: linux-cp: Fix update on IPv4 routes
 
 **Andrew Yourtchenko** <ayourtch@gmail.com>:
 
-  | `38794 <https:////gerrit.fd.io/r/c/vpp/+/38794>`_ [veC 116]: TEST: remove IKEv2 tests
-  | `38788 <https:////gerrit.fd.io/r/c/vpp/+/38788>`_ [veC 136]: TEST: blank out the SVM fifo tests
-  | `38781 <https:////gerrit.fd.io/r/c/vpp/+/38781>`_ [veC 146]: TEST: remove the rdma mappings
+  | `38794 <https:////gerrit.fd.io/r/c/vpp/+/38794>`_ [veC 117]: TEST: remove IKEv2 tests
+  | `38788 <https:////gerrit.fd.io/r/c/vpp/+/38788>`_ [veC 137]: TEST: blank out the SVM fifo tests
+  | `38781 <https:////gerrit.fd.io/r/c/vpp/+/38781>`_ [veC 147]: TEST: remove the rdma mappings
 
 **Arthur de Kerhor** <arthurdekerhor@gmail.com>:
 
-  | `39532 <https:////gerrit.fd.io/r/c/vpp/+/39532>`_ [vEC 23]: ena: add tx checksum offloads and tso support
-  | `39163 <https:////gerrit.fd.io/r/c/vpp/+/39163>`_ [VeC 31]: ipsec: allow receiving encrypted IP packets with TFC padding
-  | `32695 <https:////gerrit.fd.io/r/c/vpp/+/32695>`_ [Vec 61]: ip: add support for buffer offload metadata in ip midchain
+  | `39532 <https:////gerrit.fd.io/r/c/vpp/+/39532>`_ [vEC 24]: ena: add tx checksum offloads and tso support
+  | `39163 <https:////gerrit.fd.io/r/c/vpp/+/39163>`_ [VeC 32]: ipsec: allow receiving encrypted IP packets with TFC padding
+  | `32695 <https:////gerrit.fd.io/r/c/vpp/+/32695>`_ [Vec 62]: ip: add support for buffer offload metadata in ip midchain
 
 **Benoît Ganne** <bganne@cisco.com>:
 
-  | `39309 <https:////gerrit.fd.io/r/c/vpp/+/39309>`_ [VeC 53]: ip6: ECMP hash support for ipv6 fragments
+  | `39309 <https:////gerrit.fd.io/r/c/vpp/+/39309>`_ [VeC 54]: ip6: ECMP hash support for ipv6 fragments
 
 **Damjan Marion** <dmarion@0xa5.net>:
 
-  | `38819 <https:////gerrit.fd.io/r/c/vpp/+/38819>`_ [vEC 24]: ena: Amazon Elastic Network Adapter (ENA) native driver (experimental)
-  | `38917 <https:////gerrit.fd.io/r/c/vpp/+/38917>`_ [Vec 130]: vlib: add vlib_buffer_is_chained() and use it where possible
+  | `38819 <https:////gerrit.fd.io/r/c/vpp/+/38819>`_ [vEC 25]: ena: Amazon Elastic Network Adapter (ENA) native driver (experimental)
+  | `38917 <https:////gerrit.fd.io/r/c/vpp/+/38917>`_ [Vec 131]: vlib: add vlib_buffer_is_chained() and use it where possible
 
 **Daniel Beres** <dberes@cisco.com>:
 
-  | `37071 <https:////gerrit.fd.io/r/c/vpp/+/37071>`_ [Vec 32]: ebuild: adding libmemif to debian packages
+  | `37071 <https:////gerrit.fd.io/r/c/vpp/+/37071>`_ [Vec 33]: ebuild: adding libmemif to debian packages
 
 **Dastin Wilski** <dastin.wilski@gmail.com>:
 
-  | `37835 <https:////gerrit.fd.io/r/c/vpp/+/37835>`_ [Vec 130]: crypto-ipsecmb: crypto_key prefetch and unrolling for aes-gcm
+  | `37835 <https:////gerrit.fd.io/r/c/vpp/+/37835>`_ [Vec 131]: crypto-ipsecmb: crypto_key prefetch and unrolling for aes-gcm
 
 **Dmitry Valter** <dvalter@protonmail.com>:
 
-  | `39614 <https:////gerrit.fd.io/r/c/vpp/+/39614>`_ [vEC 3]: crypto: fix algo selection
+  | `39614 <https:////gerrit.fd.io/r/c/vpp/+/39614>`_ [vEC 4]: crypto: fix algo selection
 
 **Dzmitry Sautsa** <dzmitry.sautsa@nokia.com>:
 
-  | `37296 <https:////gerrit.fd.io/r/c/vpp/+/37296>`_ [VeC 173]: dpdk: use adapter MTU in max_frame_size setting
+  | `37296 <https:////gerrit.fd.io/r/c/vpp/+/37296>`_ [VeC 174]: dpdk: use adapter MTU in max_frame_size setting
+
+**Florin Coras** <florin.coras@gmail.com>:
+
+  | `39631 <https:////gerrit.fd.io/r/c/vpp/+/39631>`_ [vEC 0]: session: maintain old state on premature close
 
 **Frédéric Perrin** <fred@fperrin.net>:
 
-  | `39251 <https:////gerrit.fd.io/r/c/vpp/+/39251>`_ [VEc 20]: ethernet: check dmacs_bad in the fastpath case
+  | `39251 <https:////gerrit.fd.io/r/c/vpp/+/39251>`_ [VEc 21]: ethernet: check dmacs_bad in the fastpath case
 
 **Julian Klaiber** <julian@klaiber.me>:
 
-  | `39408 <https:////gerrit.fd.io/r/c/vpp/+/39408>`_ [VeC 46]: sr: SRv6 Path Tracing source node behavior
+  | `39408 <https:////gerrit.fd.io/r/c/vpp/+/39408>`_ [VeC 47]: sr: SRv6 Path Tracing source node behavior
 
 **Liangxing Wang** <liangxing.wang@arm.com>:
 
-  | `39095 <https:////gerrit.fd.io/r/c/vpp/+/39095>`_ [Vec 73]: memif: use VPP cache line size macro instead of hard coded 64 bytes
+  | `39095 <https:////gerrit.fd.io/r/c/vpp/+/39095>`_ [Vec 74]: memif: use VPP cache line size macro instead of hard coded 64 bytes
 
 **Maros Ondrejicka** <mondreji@cisco.com>:
 
-  | `38461 <https:////gerrit.fd.io/r/c/vpp/+/38461>`_ [VeC 32]: nat: fix address resolution
+  | `38461 <https:////gerrit.fd.io/r/c/vpp/+/38461>`_ [VeC 33]: nat: fix address resolution
 
 **Maxime Peim** <mpeim@cisco.com>:
 
-  | `37865 <https:////gerrit.fd.io/r/c/vpp/+/37865>`_ [VeC 48]: ipsec: huge anti-replay window support
+  | `37865 <https:////gerrit.fd.io/r/c/vpp/+/37865>`_ [VeC 49]: ipsec: huge anti-replay window support
 
 **Mohsin Kazmi** <sykazmi@cisco.com>:
 
-  | `39146 <https:////gerrit.fd.io/r/c/vpp/+/39146>`_ [Vec 32]: geneve: add support for layer 3
+  | `39146 <https:////gerrit.fd.io/r/c/vpp/+/39146>`_ [Vec 33]: geneve: add support for layer 3
 
 **Neale Ranns** <neale@graphiant.com>:
 
-  | `38092 <https:////gerrit.fd.io/r/c/vpp/+/38092>`_ [VEc 0]: ip: IP address family common input node
-  | `38116 <https:////gerrit.fd.io/r/c/vpp/+/38116>`_ [VeC 37]: ip: IPv6 validate input packet's header length does not exist buffer size
-  | `38095 <https:////gerrit.fd.io/r/c/vpp/+/38095>`_ [veC 37]: ip: Set the buffer error in ip6-input
+  | `38092 <https:////gerrit.fd.io/r/c/vpp/+/38092>`_ [VEc 1]: ip: IP address family common input node
+  | `38116 <https:////gerrit.fd.io/r/c/vpp/+/38116>`_ [VeC 38]: ip: IPv6 validate input packet's header length does not exist buffer size
+  | `38095 <https:////gerrit.fd.io/r/c/vpp/+/38095>`_ [veC 38]: ip: Set the buffer error in ip6-input
 
 **Piotr Bronowski** <piotrx.bronowski@intel.com>:
 
-  | `38409 <https:////gerrit.fd.io/r/c/vpp/+/38409>`_ [veC 74]: ipsec: introduce function esp_prepare_packet_for_enc
-  | `38407 <https:////gerrit.fd.io/r/c/vpp/+/38407>`_ [Vec 151]: ipsec: esp_encrypt prefetch and unroll - introduce new types
+  | `38409 <https:////gerrit.fd.io/r/c/vpp/+/38409>`_ [veC 75]: ipsec: introduce function esp_prepare_packet_for_enc
+  | `38407 <https:////gerrit.fd.io/r/c/vpp/+/38407>`_ [Vec 152]: ipsec: esp_encrypt prefetch and unroll - introduce new types
 
 **Simon Zolin** <steelum@gmail.com>:
 
-  | `38850 <https:////gerrit.fd.io/r/c/vpp/+/38850>`_ [VeC 137]: fib: don't leave default 'dpo-drop' rule after 'sr steer'
+  | `38850 <https:////gerrit.fd.io/r/c/vpp/+/38850>`_ [VeC 138]: fib: don't leave default 'dpo-drop' rule after 'sr steer'
 
 **Stanislav Zaikin** <zstaseg@gmail.com>:
 
-  | `39486 <https:////gerrit.fd.io/r/c/vpp/+/39486>`_ [VeC 33]: linux-cp: check if lcp_itf_pair exists before creating tap
-  | `39317 <https:////gerrit.fd.io/r/c/vpp/+/39317>`_ [VeC 61]: ip: flow hash ignore tcp/udp ports when fragmented
-  | `39305 <https:////gerrit.fd.io/r/c/vpp/+/39305>`_ [VeC 68]: interface: check sw_if_index more thoroughly
-  | `39121 <https:////gerrit.fd.io/r/c/vpp/+/39121>`_ [VeC 69]: dpdk: create and remove interface in runtime
-  | `38456 <https:////gerrit.fd.io/r/c/vpp/+/38456>`_ [VeC 160]: linux-cp: auto select tap id when creating lcp pair
+  | `39486 <https:////gerrit.fd.io/r/c/vpp/+/39486>`_ [VeC 34]: linux-cp: check if lcp_itf_pair exists before creating tap
+  | `39317 <https:////gerrit.fd.io/r/c/vpp/+/39317>`_ [VeC 62]: ip: flow hash ignore tcp/udp ports when fragmented
+  | `39305 <https:////gerrit.fd.io/r/c/vpp/+/39305>`_ [VeC 69]: interface: check sw_if_index more thoroughly
+  | `39121 <https:////gerrit.fd.io/r/c/vpp/+/39121>`_ [VeC 70]: dpdk: create and remove interface in runtime
+  | `38456 <https:////gerrit.fd.io/r/c/vpp/+/38456>`_ [VeC 161]: linux-cp: auto select tap id when creating lcp pair
 
 **Sylvain C** <sylvain.cadilhac@freepro.com>:
 
-  | `39294 <https:////gerrit.fd.io/r/c/vpp/+/39294>`_ [veC 72]: api: ip - set punt reason max length to fix VAPI generation
+  | `39294 <https:////gerrit.fd.io/r/c/vpp/+/39294>`_ [veC 73]: api: ip - set punt reason max length to fix VAPI generation
 
 **Takeru Hayasaka** <hayatake396@gmail.com>:
 
-  | `37628 <https:////gerrit.fd.io/r/c/vpp/+/37628>`_ [VeC 74]: srv6-mobile: Implement SRv6 mobile API funcs
+  | `37628 <https:////gerrit.fd.io/r/c/vpp/+/37628>`_ [VeC 75]: srv6-mobile: Implement SRv6 mobile API funcs
 
 **Ted Chen** <znscnchen@gmail.com>:
 
-  | `39062 <https:////gerrit.fd.io/r/c/vpp/+/39062>`_ [veC 115]: ethernet: fix fastpath does not drop the packet with incorrect destination MAC
+  | `39062 <https:////gerrit.fd.io/r/c/vpp/+/39062>`_ [veC 116]: ethernet: fix fastpath does not drop the packet with incorrect destination MAC
 
 **Ting Xu** <ting.xu@intel.com>:
 
-  | `39198 <https:////gerrit.fd.io/r/c/vpp/+/39198>`_ [VeC 53]: dpdk: fix variable type in pattern parsing
+  | `39198 <https:////gerrit.fd.io/r/c/vpp/+/39198>`_ [VeC 54]: dpdk: fix variable type in pattern parsing
 
 **Vladimir Ratnikov** <vratnikov@netgate.com>:
 
-  | `39287 <https:////gerrit.fd.io/r/c/vpp/+/39287>`_ [VeC 55]: ip6-nd: Revert "ip6-nd: initialize radv_info->send_radv to 1"
+  | `39287 <https:////gerrit.fd.io/r/c/vpp/+/39287>`_ [VeC 56]: ip6-nd: Revert "ip6-nd: initialize radv_info->send_radv to 1"
 
 **Vratko Polak** <vrpolak@cisco.com>:
 
-  | `38797 <https:////gerrit.fd.io/r/c/vpp/+/38797>`_ [VEc 11]: ip: make running_fragment_id thread safe
-  | `39315 <https:////gerrit.fd.io/r/c/vpp/+/39315>`_ [VEc 25]: vppapigen: recognize also _event as to_network
+  | `38797 <https:////gerrit.fd.io/r/c/vpp/+/38797>`_ [VEc 12]: ip: make running_fragment_id thread safe
+  | `39315 <https:////gerrit.fd.io/r/c/vpp/+/39315>`_ [VEc 26]: vppapigen: recognize also _event as to_network
 
 **Xiaoming Jiang** <jiangxiaoming@outlook.com>:
 
-  | `38871 <https:////gerrit.fd.io/r/c/vpp/+/38871>`_ [VeC 137]: nsh: fix plugin load failed due to undefined symbol: gre4_input_node
-  | `38742 <https:////gerrit.fd.io/r/c/vpp/+/38742>`_ [veC 163]: linux-cp: fix compiler error with libnl 3.2.x
-  | `38728 <https:////gerrit.fd.io/r/c/vpp/+/38728>`_ [veC 165]: ipsec: remove redundant match in ipsec4-input-feature with decrypted esp/ah packet
+  | `38871 <https:////gerrit.fd.io/r/c/vpp/+/38871>`_ [VeC 138]: nsh: fix plugin load failed due to undefined symbol: gre4_input_node
+  | `38742 <https:////gerrit.fd.io/r/c/vpp/+/38742>`_ [veC 164]: linux-cp: fix compiler error with libnl 3.2.x
+  | `38728 <https:////gerrit.fd.io/r/c/vpp/+/38728>`_ [veC 166]: ipsec: remove redundant match in ipsec4-input-feature with decrypted esp/ah packet
 
 **Xinyao Cai** <xinyao.cai@intel.com>:
 
-  | `38876 <https:////gerrit.fd.io/r/c/vpp/+/38876>`_ [VeC 136]: dpdk: revert "flow dpdk: introduce IP in IP support for flow"
+  | `38876 <https:////gerrit.fd.io/r/c/vpp/+/38876>`_ [VeC 137]: dpdk: revert "flow dpdk: introduce IP in IP support for flow"
 
 **Yahui Chen** <goodluckwillcomesoon@gmail.com>:
 
-  | `37653 <https:////gerrit.fd.io/r/c/vpp/+/37653>`_ [Vec 37]: af_xdp: optimizing send performance
+  | `37653 <https:////gerrit.fd.io/r/c/vpp/+/37653>`_ [Vec 38]: af_xdp: optimizing send performance
 
 **dengfeng liu** <liudf0716@gmail.com>:
 
-  | `39228 <https:////gerrit.fd.io/r/c/vpp/+/39228>`_ [VeC 84]: ipsec: should use praddr_ instead of pladdr_
-  | `39229 <https:////gerrit.fd.io/r/c/vpp/+/39229>`_ [VeC 84]: ipsec: delete redundant code
+  | `39228 <https:////gerrit.fd.io/r/c/vpp/+/39228>`_ [VeC 85]: ipsec: should use praddr_ instead of pladdr_
+  | `39229 <https:////gerrit.fd.io/r/c/vpp/+/39229>`_ [VeC 85]: ipsec: delete redundant code
 
 **hui zhang** <zhanghui1715@gmail.com>:
 
-  | `38451 <https:////gerrit.fd.io/r/c/vpp/+/38451>`_ [vEc 25]: vrrp: dump vrrp vr peer
+  | `38451 <https:////gerrit.fd.io/r/c/vpp/+/38451>`_ [vEc 26]: vrrp: dump vrrp vr peer
 
 **shivansh S** <shivansh.nwk@gmail.com>:
 
-  | `39363 <https:////gerrit.fd.io/r/c/vpp/+/39363>`_ [VeC 54]: dhcp: fix dhcp multiple client request
+  | `39363 <https:////gerrit.fd.io/r/c/vpp/+/39363>`_ [VeC 55]: dhcp: fix dhcp multiple client request
 
 **vinay tripathi** <vinayx.tripathi@intel.com>:
 
-  | `38792 <https:////gerrit.fd.io/r/c/vpp/+/38792>`_ [VEc 3]: ipsec: modify IPsec related tests to send and verify UDP-encapsulated ESP traffics
-  | `38793 <https:////gerrit.fd.io/r/c/vpp/+/38793>`_ [Vec 100]: ipsec: separate UDP and UDP-encapsulated ESP packet processing
+  | `38792 <https:////gerrit.fd.io/r/c/vpp/+/38792>`_ [VEc 0]: ipsec: modify IPsec related tests to send and verify UDP-encapsulated ESP traffics
+  | `38791 <https:////gerrit.fd.io/r/c/vpp/+/38791>`_ [vEC 0]: ipsec: move udp/esp packet processing in the inline function ipsec_udp_encap_esp_packet_process
+  | `38793 <https:////gerrit.fd.io/r/c/vpp/+/38793>`_ [Vec 101]: ipsec: separate UDP and UDP-encapsulated ESP packet processing
 
 Legend:
 -------
@@ -323,7 +328,7 @@ Statistics:
 ================ ===
 Patches assigned
 ================ ===
-authors          52
+authors          54
 maintainers      33
 committers       0
 abandoned        0
