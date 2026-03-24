@@ -43,7 +43,7 @@ Here is the latest VPP Gerrit Report:
 FD.io VPP (master branch) Gerrit Change Report
 ==============================================
 --------------------------------------------
-generated on Tuesday 2026-03-24, 20:17:36
+generated on Tuesday 2026-03-24, 20:31:42
 --------------------------------------------
 
 
@@ -97,7 +97,7 @@ bufmon: **Benoît Ganne** <bganne@cisco.com>
   | `45110 <https:////gerrit.fd.io/r/c/vpp/+/45110>`_ [VECr 7]: bufmon: unregister old callbacks before re-registering on enable
 
 build: **Damjan Marion** <damarion@cisco.com>
-  | `45119 <https:////gerrit.fd.io/r/c/vpp/+/45119>`_ [VECr 17]: build: add Fedora 43 build compatibility
+  | `45119 <https:////gerrit.fd.io/r/c/vpp/+/45119>`_ [VECr 18]: build: add Fedora 43 build compatibility
   | `45112 <https:////gerrit.fd.io/r/c/vpp/+/45112>`_ [VECr 18]: build: add AlmaLinux support to install-dep target
   | `45033 <https:////gerrit.fd.io/r/c/vpp/+/45033>`_ [VECr 20]: af_xdp: add support for multi-buffer
 
@@ -174,7 +174,7 @@ ip6-nd: **Dave Barach** <vpp@barachs.net>, **Neale Ranns** <neale@graphiant.com>
   | `44966 <https:////gerrit.fd.io/r/c/vpp/+/44966>`_ [VECr 19]: ip-neighbor: fix missing solicited-node multicast MAC
 
 ipsec: **Neale Ranns** <neale@graphiant.com>, **Fan Zhang** <fanzhang.oss@gmail.com>
-  | `45113 <https:////gerrit.fd.io/r/c/vpp/+/45113>`_ [VECr 17]: ipsec: fix implicit enum cast warnings with GCC 15
+  | `45113 <https:////gerrit.fd.io/r/c/vpp/+/45113>`_ [VECr 18]: ipsec: fix implicit enum cast warnings with GCC 15
   | `44827 <https:////gerrit.fd.io/r/c/vpp/+/44827>`_ [VECr 27]: crypto: unify per-thread key_data allocation
 
 kube-test: **Florin Coras** <fcoras@cisco.com>, **Adrian Villin** <avillin@cisco.com>
@@ -197,12 +197,12 @@ misc: **vpp-dev Mailing List** <vpp-dev@fd.io>
   | `45042 <https:////gerrit.fd.io/r/c/vpp/+/45042>`_ [VECr 6]: stats: stat_segment_ls_r() only return NULL on error
   | `45043 <https:////gerrit.fd.io/r/c/vpp/+/45043>`_ [VECr 6]: stats: don't leak regcomp() allocated memory
   | `44479 <https:////gerrit.fd.io/r/c/vpp/+/44479>`_ [VECr 11]: ip: add interface address change notifications
-  | `45119 <https:////gerrit.fd.io/r/c/vpp/+/45119>`_ [VECr 17]: build: add Fedora 43 build compatibility
+  | `45119 <https:////gerrit.fd.io/r/c/vpp/+/45119>`_ [VECr 18]: build: add Fedora 43 build compatibility
   | `45033 <https:////gerrit.fd.io/r/c/vpp/+/45033>`_ [VECr 20]: af_xdp: add support for multi-buffer
   | `44827 <https:////gerrit.fd.io/r/c/vpp/+/44827>`_ [VECr 27]: crypto: unify per-thread key_data allocation
 
 nat: **Ole Troan** <ot@cisco.com>, **Filip Varga** <fivarga@cisco.com>, **Klement Sekera** <klement.sekera@gmail.com>
-  | `44985 <https:////gerrit.fd.io/r/c/vpp/+/44985>`_ [VECr 19]: nat: link test_pnat with pthread
+  | `44985 <https:////gerrit.fd.io/r/c/vpp/+/44985>`_ [VECr 20]: nat: link test_pnat with pthread
 
 octeon: **Monendra Singh Kushwaha** <kmonendra@marvell.com>, **Damjan Marion** <damarion@cisco.com>
   | `45161 <https:////gerrit.fd.io/r/c/vpp/+/45161>`_ [VECr 0]: octeon: fix device BAR4 mapping
@@ -223,7 +223,7 @@ quic: **Aloys Augustin** <aloaugus@cisco.com>, **Nathan Skrzypczak** <nathan.skr
   | `44827 <https:////gerrit.fd.io/r/c/vpp/+/44827>`_ [VECr 27]: crypto: unify per-thread key_data allocation
 
 sasc: **Ole Troan** <otroan@employees.org>, **Mohammed Hawari** <mohammed@hawari.fr>
-  | `45115 <https:////gerrit.fd.io/r/c/vpp/+/45115>`_ [VECr 17]: sasc: fix maybe-uninitialized warning with GCC 15
+  | `45115 <https:////gerrit.fd.io/r/c/vpp/+/45115>`_ [VECr 18]: sasc: fix maybe-uninitialized warning with GCC 15
 
 sfdp: **Mohammed Hawari** <mohammed@hawari.fr>, **Hadi Rayan Al-Sandid** <halsandi@cisco.com>, **Guillaume Solignac** <gsoligna@cisco.com>, **Ole Troan** <otroan@employees.org>
   | `45101 <https:////gerrit.fd.io/r/c/vpp/+/45101>`_ [VECr 0]: sfdp: guard packet bit shifts in lookup
@@ -238,7 +238,7 @@ snort: **Damjan Marion** <damarion@cisco.com>
   | `44923 <https:////gerrit.fd.io/r/c/vpp/+/44923>`_ [VECr 6]: snort: copy metadata from original to generated packets
   | `44919 <https:////gerrit.fd.io/r/c/vpp/+/44919>`_ [VECr 6]: snort: fix inject/finalize ordering race in deq node
   | `45177 <https:////gerrit.fd.io/r/c/vpp/+/45177>`_ [VECr 12]: sfdp: add blacklist/whitelist to snort service
-  | `45116 <https:////gerrit.fd.io/r/c/vpp/+/45116>`_ [VECr 17]: snort: fix maybe-uninitialized warning with GCC 15
+  | `45116 <https:////gerrit.fd.io/r/c/vpp/+/45116>`_ [VECr 18]: snort: fix maybe-uninitialized warning with GCC 15
 
 srv6-mobile: **Tetsuya Murakami** <tetsuya.mrk@gmail.com>, **Satoru Matsushima** <satoru.matsushima@gmail.com>
   | `44899 <https:////gerrit.fd.io/r/c/vpp/+/44899>`_ [VECr 6]: sr: implement sub-int L2 encap and DX2
@@ -357,6 +357,10 @@ Authors:
 
   | `45298 <https:////gerrit.fd.io/r/c/vpp/+/45298>`_ [vEC 0]: tls: add ecdsa with X25519 test
 
+**G. Paul Ziemba** <pz-vpp-dev@ziemba.us>:
+
+  | `44494 <https:////gerrit.fd.io/r/c/vpp/+/44494>`_ [vEC 0]: stats: vpp_get_stats: new options
+
 **Hadi Rayan Al-Sandid** <halsandi@cisco.com>:
 
   | `44847 <https:////gerrit.fd.io/r/c/vpp/+/44847>`_ [VEc 29]: sfdp: modify tenant_index type from u16 to u32
@@ -383,13 +387,13 @@ Authors:
 
   | `45290 <https:////gerrit.fd.io/r/c/vpp/+/45290>`_ [vEc 0]: tcp: pace jumbo connections with at least one MSS
   | `45102 <https:////gerrit.fd.io/r/c/vpp/+/45102>`_ [vEC 0]: sfdp: add configurable timer interval
-  | `45285 <https:////gerrit.fd.io/r/c/vpp/+/45285>`_ [vEc 2]: tcp: avoid new data while sack holes remain
+  | `45285 <https:////gerrit.fd.io/r/c/vpp/+/45285>`_ [vEc 3]: tcp: avoid new data while sack holes remain
   | `45051 <https:////gerrit.fd.io/r/c/vpp/+/45051>`_ [VEc 11]: ip6: fix OOB read in HBH option processing
   | `45159 <https:////gerrit.fd.io/r/c/vpp/+/45159>`_ [VEc 13]: iavf: fix native AVF TSO queue setup
   | `45057 <https:////gerrit.fd.io/r/c/vpp/+/45057>`_ [VEc 18]: geneve: validate options_len field against buffer size
   | `44559 <https:////gerrit.fd.io/r/c/vpp/+/44559>`_ [VEc 21]: af_xdp: ensure null termination in format() string outputs
   | `44584 <https:////gerrit.fd.io/r/c/vpp/+/44584>`_ [veC 61]: tests: fix tag_fixme_debian12 to tag_fixme_debian11
-  | `44572 <https:////gerrit.fd.io/r/c/vpp/+/44572>`_ [VeC 72]: virtio: add native plugin L2 xconnect test with QEMU
+  | `44572 <https:////gerrit.fd.io/r/c/vpp/+/44572>`_ [VeC 73]: virtio: add native plugin L2 xconnect test with QEMU
 
 **Jing Peng** <jing@meter.com>:
 
@@ -523,96 +527,6 @@ Authors:
   | `44536 <https:////gerrit.fd.io/r/c/vpp/+/44536>`_ [veC 57]: hs-test: fix CI infra issues
   | `44421 <https:////gerrit.fd.io/r/c/vpp/+/44421>`_ [VeC 57]: l2: fix null pointer access in l2-efp-filter
 
-Abandoned:
-----------
-**The following gerrit changes have not been updated in over 180 days and have been abandoned.**
-
-**Andrew Yourtchenko** <ayourtch@gmail.com>:
-
-  | `43258 <https:////gerrit.fd.io/r/c/vpp/+/43258>`_ [A 210]: gpcapng: first draft
-
-**Anna Neiman** <anna.neiman@insidepacket.com>:
-
-  | `43461 <https:////gerrit.fd.io/r/c/vpp/+/43461>`_ [A 245]: lacp: optionally move lacp tx to the worker ( not vpp_main)
-  | `43358 <https:////gerrit.fd.io/r/c/vpp/+/43358>`_ [A 266]: lacp: handle lacp input fsm in vpp_main; handle bond change state operations without traffic ( between barrier_sync..  barrier_release)
-  | `43281 <https:////gerrit.fd.io/r/c/vpp/+/43281>`_ [A 267]: l2: l2_flood-clone whole buffers
-
-**Bartlomiej Leszak** <bartlomiej.leszak@gmail.com>:
-
-  | `42066 <https:////gerrit.fd.io/r/c/vpp/+/42066>`_ [A 295]: cnat: fix udp checksum calculation
-
-**Benison Technologies** <benison@benisontech.com>:
-
-  | `43527 <https:////gerrit.fd.io/r/c/vpp/+/43527>`_ [A 212]: ipsec: handoff and vlan fixes ipsec - AH
-
-**Hadi Rayan Al-Sandid** <halsandi@cisco.com>:
-
-  | `43500 <https:////gerrit.fd.io/r/c/vpp/+/43500>`_ [A 236]: ping: add option to specify interface src-address
-
-**Hedi Bouattour** <hedibouattour2010@gmail.com>:
-
-  | `43073 <https:////gerrit.fd.io/r/c/vpp/+/43073>`_ [A 293]: cnat: fix cnat when there is an encapsulation
-  | `43003 <https:////gerrit.fd.io/r/c/vpp/+/43003>`_ [A 306]: cnat: delete sessions when translations are updated
-
-**Maxim Uvarov** <maxim@skbuff.ru>:
-
-  | `43694 <https:////gerrit.fd.io/r/c/vpp/+/43694>`_ [A 183]: oe: add README.rst
-  | `43695 <https:////gerrit.fd.io/r/c/vpp/+/43695>`_ [A 183]: oe: add myself to OE maintainers
-  | `43693 <https:////gerrit.fd.io/r/c/vpp/+/43693>`_ [A 183]: oe: add openembedded layer to build vpp
-
-**Mohsin Kazmi** <sykazmi@cisco.com>:
-
-  | `41435 <https:////gerrit.fd.io/r/c/vpp/+/41435>`_ [A 190]: vppinfra: add ARM Neoverse-V1 support
-
-**Naveen Joy** <najoy@cisco.com>:
-
-  | `42376 <https:////gerrit.fd.io/r/c/vpp/+/42376>`_ [A 244]: misc: patch to test CI infra changes
-  | `42966 <https:////gerrit.fd.io/r/c/vpp/+/42966>`_ [A 307]: tests: ipip checksum offload interface tests for IPv4 tunnels
-
-**Rock Go** <guozhenqiangg@qq.com>:
-
-  | `43359 <https:////gerrit.fd.io/r/c/vpp/+/43359>`_ [A 259]: nat: fix two problems in hairpin NAT scenario 1. Add source port information to nat44-ed o2i flow's rewrite. 2. Rewrite tx_fib_index when hairpin traffic crosses VRFs.
-
-**Sanjyot Vaidya** <sanjyot.vaidya@arm.com>:
-
-  | `42983 <https:////gerrit.fd.io/r/c/vpp/+/42983>`_ [A 307]: acl: added hit count logic in VPP for debugging
-
-**Stanislav Zaikin** <zstaseg@gmail.com>:
-
-  | `42931 <https:////gerrit.fd.io/r/c/vpp/+/42931>`_ [A 186]: cnat: add vrf awareness
-
-**Vladimir Smirnov** <civil.over@gmail.com>:
-
-  | `42090 <https:////gerrit.fd.io/r/c/vpp/+/42090>`_ [A 207]: build: Add VPP_MAX_WORKERS configure option
-
-**Vladislav Grishenko** <themiron@mail.ru>:
-
-  | `40436 <https:////gerrit.fd.io/r/c/vpp/+/40436>`_ [A 282]: ip: mark IP_TABLE_DUMP and IP_ROUTE_DUMP as mp-safe
-
-**Vratko Polak** <vrpolak@cisco.com>:
-
-  | `38797 <https:////gerrit.fd.io/r/c/vpp/+/38797>`_ [A 195]: ip: make running_fragment_id thread safe
-
-**bsoares.it@gmail.com** <bsoares.it@gmail.com>:
-
-  | `42944 <https:////gerrit.fd.io/r/c/vpp/+/42944>`_ [A 313]: vhost: add full_tx_queue_placement option for vhost-user interfaces
-
-**chenxk** <case2111@163.com>:
-
-  | `43481 <https:////gerrit.fd.io/r/c/vpp/+/43481>`_ [A 241]: dispatch-trace: fix crash issues caused by buffer-trace
-
-**echo** <614699596@qq.com>:
-
-  | `43520 <https:////gerrit.fd.io/r/c/vpp/+/43520>`_ [A 231]: bonding: capture rx packets before ethernet-input node.
-
-**mjbenz** <michael.benz@windriver.com>:
-
-  | `42969 <https:////gerrit.fd.io/r/c/vpp/+/42969>`_ [A 312]: Makefile: Added support for the Wind River eLxr distribution
-
-**oopsadm** <oopsadm@gmail.com>:
-
-  | `43357 <https:////gerrit.fd.io/r/c/vpp/+/43357>`_ [A 261]: ethernet: fix mac mismatch in promisc mode
-
 Legend:
 -------
 ========================== ===========================
@@ -639,9 +553,9 @@ Statistics:
 ================ ===
 Patches assigned
 ================ ===
-authors          93
+authors          94
 maintainers      57
 committers       1
-abandoned        26
+abandoned        0
 ================ ===
 
