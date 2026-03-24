@@ -29,9 +29,9 @@ import venv
 import datetime
 
 # Pip version pinning
-pip_version = "25.1.1"
-pip_tools_version = "7.5.0"
-setuptools_version = "80.9.0"
+pip_version = "26.0.1"
+pip_tools_version = "7.5.3"
+setuptools_version = "82.0.1"
 script_dir = os.path.dirname(os.path.realpath(__file__))
 requirements_file = os.path.join(script_dir, "requirements.txt")
 pip_compiled_requirements_file = os.path.join(script_dir, "requirements-3.txt")

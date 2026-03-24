@@ -252,7 +252,7 @@ def print_report(project, branch, abandon_days, report):
                     st, new = get_stream(r["assignee"], c)
                     if new:
                         maintainers = f'**{r["missing_reviews_from"][c]["by"]}'
-                        maintainers = re.sub("[\[\]']+", "", maintainers)
+                        maintainers = re.sub(r"[\[\]']+", "", maintainers)
                         maintainers = re.sub(", ", ", **", maintainers)
                         maintainers = re.sub(" <", "** <", maintainers)
                         maintainers = re.sub(
@@ -407,9 +407,11 @@ def main():
         if "display_name" in change["owner"]:
             s[
                 "owner"
-            ] = f'**{change["owner"]["display_name"]}** <{change["owner"]["email"]}>'
+            ] = f'**{change["owner"]["display_name"]}**'
         else:
-            s["owner"] = f'**{change["owner"]["name"]}** <{change["owner"]["email"]}>'
+            s["owner"] = f'**{change["owner"]["name"]}**'
+        if "email" in change["owner"]:
+            s["owner"] = f"{s["owner"]} <{change["owner"]["email"]}>"
         s["number"] = change["_number"]
 
         try:
